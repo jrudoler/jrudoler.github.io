@@ -3,5 +3,5 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
-![This is me](/images/Backyard_2.jpg =250x)
+<img src="/images/Backyard_2.jpg" alt="This is me" width="200"/>
 Welcome to my site! I hope to share some of the things I've been thinking about...
