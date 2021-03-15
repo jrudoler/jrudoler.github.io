@@ -20,7 +20,7 @@
 
 title: Joey's personal site
 email: jrudoler56@gmail.com
-description: "Home of a curious data scientist / physicist / musician / literary fanboy"
+description: &description "Home of a curious data scientist / physicist / musician / literary fanboy"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jrudoler
