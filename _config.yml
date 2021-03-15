@@ -33,7 +33,7 @@ github_username:  jrudoler
 theme: minima
 plugins:
   - jekyll-feed
-
+  - jekyll-gist
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
