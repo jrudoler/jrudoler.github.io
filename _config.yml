@@ -28,7 +28,7 @@ twitter_username: jrudoler
 github_username:  jrudoler
 
 # Build settings
-theme: jekyll-theme-midnight
+theme: minimal
 plugins:
   - jekyll-feed
   - jekyll-gist
