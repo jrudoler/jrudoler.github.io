@@ -6,6 +6,8 @@ permalink: /Books/
 A running list of things I've been reading...
 
 ## Fiction
+- Galapagos (Kurt Vonnegut)
+- Inferno (Dan Brown)
 - A Visit From the Good Squad (Jennifer Egan)
 - Catch 22 (Joseph Heller)
 - Anna Karenina (Leo Tolstoy)
