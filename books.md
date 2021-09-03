@@ -17,3 +17,7 @@ A running list of things I've been reading...
 - An Unquiet Mind: A Memoir of Moods and Madness (Kay Jamison)
 - The Fabric of the Cosmos: Space, Time, and the Texture of Reality (Brian Greene)
 - A Brief History of Time (Stephen Hawking)
+
+## Academic / Educational Texts
+- Bayesian Data Analysis, Third Edition (Andrew Gelman)
+- Statistical Rethinking (Richard McElreath)
