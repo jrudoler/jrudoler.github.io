@@ -3,6 +3,9 @@ layout: page
 title: Books
 permalink: /Books/
 ---
+> "Any brain worth a nickel knows books are good for us." \
+> \- Kurt Vonnegut 
+
 A running list of things I've been reading...
 
 ## Fiction
