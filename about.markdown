@@ -3,11 +3,13 @@ layout: page
 title: About
 permalink: /about/
 ---
+<img src="/images/tetons_wall.jpg" alt="This is me" hspace="30" vspace="20" width="300" align="right"/>
 > In works of labour, or of skill,\
 >     I would be busy too;\
 > For Satan find some mischief still,\
 >     For idle hands to do.\
 >       \- Isaac Watts
+
 
 Hey there! I'm Joey. I'm a graduate student at the University of Pennsylvania, pursuing an MSE in Data Science. I attended Penn for undergrad as well, majoring in Physics & Astronomy with a Concentration in Business and Technology, along with minors in English and Music. 
 
