@@ -6,7 +6,7 @@ permalink: /about/
 <img src="/images/tetons_wall.jpg" alt="This is me" hspace="30" vspace="20" width="300" align="right"/>
 > In works of labour, or of skill,\
 >     I would be busy too;\
-> For Satan find some mischief still,\
+> For Satan finds some mischief still,\
 >     For idle hands to do.\
 >       \- Isaac Watts
 
