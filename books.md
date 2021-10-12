@@ -16,6 +16,7 @@ A running list of things I've been reading...
 - Anna Karenina (Leo Tolstoy)
 
 ## Non-fiction
+- Man's Quest for God (Abraham Joshua Heschel)
 - The Signal and the Noise (Nate Silver)
 - An Unquiet Mind: A Memoir of Moods and Madness (Kay Jamison)
 - The Fabric of the Cosmos: Space, Time, and the Texture of Reality (Brian Greene)
