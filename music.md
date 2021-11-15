@@ -4,6 +4,7 @@ title: Music
 permalink: /Music/
 ---
 Here's a sampling of the music I've been listening to:
+- *Donda*, Kanye West
 - *OK Orchestra*, AJR
 - *Change of Scenery II*, Quinn XCII
 - *Simple - Single*, Sam Fischer
