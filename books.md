@@ -9,6 +9,7 @@ permalink: /Books/
 A running list of things I've been reading...
 
 ## Fiction
+- The Glass Castle (Jeannette Walls)
 - Galapagos (Kurt Vonnegut)
 - Inferno (Dan Brown)
 - A Visit From the Good Squad (Jennifer Egan)
