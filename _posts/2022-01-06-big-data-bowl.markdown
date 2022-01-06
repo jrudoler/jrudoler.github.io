@@ -17,10 +17,10 @@ Or, in the mind of a data scientist, can we devise a mathematical framework whic
 
 The basic idea is as follows:
 ### Model 
-We begin by regressing the tracking data of kick returns, as summarized by 100 features, onto the value of a kick return. Note that the _value_ of a yard line is the expected points of the next score if you start at that yard line, and so the value of a kick return is simply the value of the end yard line of the kick return. This regression yields a function $\hat{f}$ which, given the tracking data of a kick return frame, returns the expected value of that kick return frame.
+We begin by regressing the tracking data of kick returns, as summarized by 100 features, onto the value of a kick return. Note that the _value_ of a yard line is the expected points of the next score if you start at that yard line, and so the value of a kick return is simply the value of the end yard line of the kick return. This regression yields a function $$\hat{f}$$ which, given the tracking data of a kick return frame, returns the expected value of that kick return frame.
 
 ### Predict
-Given $\hat{f}$ and the tracking data of all players on the field during a given kick return frame, we compute the kick returner's optimal next location by maximizing $\hat{f}$ over a set of candidate next locations for the kick returner. With this, we can compute the optimal kick return location at any frame, and we can compute a complete optimal kick return path by repeating the procedure over sequential frames. 
+Given $$\hat{f}$$ and the tracking data of all players on the field during a given kick return frame, we compute the kick returner's optimal next location by maximizing $$\hat{f}$$ over a set of candidate next locations for the kick returner. With this, we can compute the optimal kick return location at any frame, and we can compute a complete optimal kick return path by repeating the procedure over sequential frames. 
 
 ### Evaluate players
 We conclude our study by comparing actual kick return movements to our computed optimal movements, and by devising a metric to judge a kick returner's decision making.
@@ -31,19 +31,19 @@ We use a multiple linear regression model primarily because we want control over
 
 ## Response Column
 
-Our response variable (dependent variable) is $V$, the "value" of the ending yard line of a kickoff return. We define the value of a yardline $z$, where $z$ means $z$ yards away from scoring a touchdown, as the expected number of points of the next score given that you start with a first down at yard line $z$. To find $V_z$ for each $z$, we simply take the average value of all points of the next score from every first down at yard line $z$ from 2010 to 2018. Then, we smooth these values. We performed this computation using `nflFastR` data in a separate project [1]. Below is a plot of $V_z$ as a function of $z$.
+Our response variable (dependent variable) is $$V$$, the "value" of the ending yard line of a kickoff return. We define the value of a yardline $$z$$, where $$z$$ means $$z$$ yards away from scoring a touchdown, as the expected number of points of the next score given that you start with a first down at yard line $$z$$. To find $$V_z$$ for each $$z$$, we simply take the average value of all points of the next score from every first down at yard line $$z$$ from 2010 to 2018. Then, we smooth these values. We performed this computation using `nflFastR` data in a separate project [1]. Below is a plot of $$V_z$$ as a function of $$z$$.
 
 ![](https://drive.google.com/uc?export=view&id=1tbbTe1ws0iG02XtUi2VPHZGHWa64nur8)
 
-For the remiander of the project, we use the $x$ coordinate of the $\{(x,y)\}$ grid representing the football field, where $x \in [0,120]$ denotes the yard line, $y\in [0,53.3]$ denotes the latitude, and the origin $(0,0)$ denotes the bottom left corner of the field. Thus the value of a kick return ending at yardline $x$ is $V_{110-x}$.
+For the remiander of the project, we use the $$x$$ coordinate of the $$\{(x,y)\}$$ grid representing the football field, where $$x \in [0,120]$$ denotes the yard line, $$y\in [0,53.3]$$ denotes the latitude, and the origin $$(0,0)$$ denotes the bottom left corner of the field. Thus the value of a kick return ending at yardline $$x$$ is $$V_{110-x}$$.
 
 ## Feature: Kick Returner's Yardline
 
-$x_{kr}$, the $x$ yardline of the kick return in the current frame, is a feature because the value of a kick return frame depends on how close the kick returner is to the endzone.
+$$x_{kr}$$, the $$x$$ yardline of the kick return in the current frame, is a feature because the value of a kick return frame depends on how close the kick returner is to the endzone.
 
-## Feature: $j^{th}$-Projected-Gap-Distance
+## Feature: $$j^{th}$$-Projected-Gap-Distance
 
-For each $j \in \{1,...,11\}$, we find the $y$-distance to the $j^{th}$ closest defender when the kick returner is projected onto the average $x$ location of the defenders. Mathematically, letting $kr$ be the index of the kick returner, $dj$ be the index of the $j^{th}$ closest defender, and $\theta = -(dir_{kr} - 90)$, the feature is given by
+For each $$j \in \{1,...,11\}$$, we find the $$y$$-distance to the $$j^{th}$$ closest defender when the kick returner is projected onto the average $$x$$ location of the defenders. Mathematically, letting $$kr$$ be the index of the kick returner, $$dj$$ be the index of the $$j^{th}$$ closest defender, and $$\theta = -(dir_{kr} - 90)$$, the feature is given by
 $$\Delta y_{dj} = (y_{dj} - y_{kr}) + (\frac{1}{11}\sum_{j=1}^{11}x_{dj} - x_{kr})\cdot \tan(\theta).$$
 
 Here is a picture which illustrates the feature.
@@ -51,45 +51,45 @@ Here is a picture which illustrates the feature.
 ![](https://drive.google.com/uc?export=view&id=1RReSGzmIbjJ8-tV6SWtmBq1s2NrUJv0i)
 
 
-## Indicator Variable: $j^{th}$-Defender-Cannot-Catch-The-Kick-Returner 
+## Indicator Variable: $$j^{th}$$-Defender-Cannot-Catch-The-Kick-Returner 
 
-Letting $dj$ denote the $j^{th}$ closest defender to the kick returner, we want an indicator variable
+Letting $$dj$$ denote the $$j^{th}$$ closest defender to the kick returner, we want an indicator variable
 
 $$C_j = \unicode{x1D7D9}\{ dj \text{ cannot catch }  kr\}.$$
 
-We define $C_j$ as 1 if and only if $dj$ cannot get to the intersection $**$ in the explanatory image below before $kr$, which is calculated using the locations, speed, and direction of the $kr$ and $dj$. Note that $C_j$ itself is not a feature, but will be used in a feature below.
+We define $$C_j$$ as 1 if and only if $$dj$$ cannot get to the intersection $$**$$ in the explanatory image below before $kr$, which is calculated using the locations, speed, and direction of the $$kr$$ and $$dj$$. Note that $$C_j$$ itself is not a feature, but will be used in a feature below.
 
 ![](https://drive.google.com/uc?export=view&id=1rJHev2T2Jn8FqJUkC3jwZKAPfvP_uiZv)
 
-## Indicator Variable: $j^{th}$-Defender-Is-Blocked 
+## Indicator Variable: $$j^{th}$$-Defender-Is-Blocked 
 
 Letting $dj$ denote the $j^{th}$ closest defender to the kick returner, we want an indicator variable
 
 $$B_j = \unicode{x1D7D9}\{ dj \text{ is blocked} \}.$$
 
-We define $B_j$ as 1 if and only if a blocker can get to the intersection $*$ in the explanatory image below before $dj$, which is calculated using the locations, speed, and direction of the blockers and $dj$. $B_j$ itself is not a feature, but will be used in a feature below.
+We define $$B_j$$ as 1 if and only if a blocker can get to the intersection $*$ in the explanatory image below before $dj$, which is calculated using the locations, speed, and direction of the blockers and $$dj$$. $$B_j$$ itself is not a feature, but will be used in a feature below.
 
 **Note**: we assume that each blocker is only able to block a single defender. Defenders and blockers are considered in order of their proximity to the kick returner. For instance, we first consider the closest defender; if a blocker can intercept them, that blocker is ineligible when we consider the second closest defender. Thus, the $j$th defender is blocked if and only if their is an *available* defender that can reach intersection $*$ first. 
 
 ![](https://drive.google.com/uc?export=view&id=1o35rS5CHW0Cpk3pu83F88sJDvpfUcA29)
 
-## Feature: Segmented Distance to the $j^{th}$ Closest Defender
+## Feature: Segmented Distance to the $$j^{th}$$ Closest Defender
 
 First, let
 
 $$A_j = (1-B_j) \cdot (1 - C_j)$$
 
-be the $j^{th}$-_Able-to-Tackle_ indicator variable, which is 1 if and only if the $j^{th}$ defender can catch $kr$ and is not blocked. 
+be the $$j^{th}$$-_Able-to-Tackle_ indicator variable, which is 1 if and only if the $j^{th}$ defender can catch $kr$ and is not blocked. 
 
-Denote the distance between the kick returner $kr$ and the $j^{th}$ closest defender $dj$ as
+Denote the distance between the kick returner $$kr$$ and the $$j^{th}$$ closest defender $$dj$$ as
 $$d(kr,dj) := \sqrt{(x_{kr}-x_{dj})^2 + (y_{kr}-y_{dj})^2}.$$
 
-Let $\lambda_1$ and $\lambda_2$ be hyperparameters encoding how close $kr$ and $dj$ are in terms of $x$-distance in yards. For now, we set $\lambda_1 = 2$ and $\lambda_2 = 2$. If inclined, we can do a cross validation to determine better values for these hyperparameters.
+Let $$\lambda_1$$ and $$\lambda_2$$ be hyperparameters encoding how close $$kr$$ and $$dj$$ are in terms of $$x$$-distance in yards. For now, we set $$\lambda_1 = 2$$ and $$\lambda_2 = 2$$. If inclined, we can do a cross validation to determine better values for these hyperparameters.
 
-Then, in our regression, we want terms indicating the distance of $kr$ to $dj$, with different coefficients depending on whether the defender is in front of or behind the kicker, whether the defender is blocked, and whether the defender can catch the kick returner. For example, a defender who is 5 yards away from the kick returner should be treated differently depending on whether he is blocked or not. Also, a defender who is 1 yard away from the kick returner should be treated differently depending on whether he is in front of or behind the returner. Defenders can have a vastly different impact on the outcome of the play depending on these conditions.
+Then, in our regression, we want terms indicating the distance of $$kr$$ to $$dj$$, with different coefficients depending on whether the defender is in front of or behind the kicker, whether the defender is blocked, and whether the defender can catch the kick returner. For example, a defender who is 5 yards away from the kick returner should be treated differently depending on whether he is blocked or not. Also, a defender who is 1 yard away from the kick returner should be treated differently depending on whether he is in front of or behind the returner. Defenders can have a vastly different impact on the outcome of the play depending on these conditions.
 
-So, for the $j^{th}$ defender, we have 8 _segmented-distance_ features:
-
+So, for the $$j^{th}$$ defender, we have 8 _segmented-distance_ features:
+$$
 \begin{align*}
   & d(kr,dj)  \cdot \unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (\lambda_1,\infty) \} \cdot A_j \\
   & d(kr,dj) \cdot \unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (\lambda_1,\infty) \} \cdot (1-A_j)  \\
@@ -100,6 +100,7 @@ So, for the $j^{th}$ defender, we have 8 _segmented-distance_ features:
   & d(kr,dj) \cdot \unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (-\infty, -\lambda_2] \} \cdot A_j  \\
   & d(kr,dj) \cdot \unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (-\infty, -\lambda_2] \} \cdot (1-A_j)  \\
 \end{align*}
+$$
 
 ## Run the Regression
 
