@@ -9,6 +9,7 @@ permalink: /Books/
 A running list of things I've been reading...
 
 ## Fiction
+- The Sirens of Titan (Kurt Vonnegut)
 - The Glass Castle (Jeannette Walls)
 - Galapagos (Kurt Vonnegut)
 - Inferno (Dan Brown)
