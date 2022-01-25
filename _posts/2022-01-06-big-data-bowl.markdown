@@ -162,7 +162,7 @@ This visualization - showing the frame-by-frame deviations of the algorithm from
 
 ## _ADOM_
 
-For the $i^{th}$ frame, let $(x_{i+1,1},y_{i+1,1})$ be the kick returner's observed next location, and let $(x_{i+1,*},y_{i+1,*})$ be our computed optimal next location for the kick returner. The distance $d_i$ between these 2 points is
+For the $$i^{th}$$ frame, let $$(x_{i+1,1},y_{i+1,1})$$ be the kick returner's observed next location, and let $$(x_{i+1,*},y_{i+1,*})$$ be our computed optimal next location for the kick returner. The distance $$d_i$$ between these 2 points is
 
 $$d_i = \sqrt{(x_{i1}-x_{i*})^2 + (y_{i1}-y_{i*})^2}.$$
 
@@ -170,13 +170,13 @@ We define a kick returner's _average deviation from optimal movement_, or _ADOM_
 
 $$ADOM := \frac{1}{n} \sum_{\text{frames } i=1}^{n} d_i. $$
 
-A _lower_ $ADOM$ indicates better kick-return decision making.
+A _lower_ $$ADOM$$ indicates better kick-return decision making.
 
-For instance, the $ADOM$ of the example kick return shown above is $0.55$, indicating that the kick returner is on average about a half yard away from optimal movement during that kick return.
+For instance, the $$ADOM$$ of the example kick return shown above is $$0.55$$, indicating that the kick returner is on average about a half yard away from optimal movement during that kick return.
 
 As we used all kick returns from 2018 and 2019 as training data for our regression, this leaves all 2020 kick returns as hold-out testing data. 
 
-Rather than evaluate every frame of every play, to increase our computational efficiency we found the optimal next kick-returner location for every $10^{th}$ frame of every kick return from 2020. We then computed $ADOM$ for every kick returner in this period, which produced the rankings of the 10 best kick return decision makers, for kick returners recording at least 15 kick returns. Note that a lower _ADOM_ corresponds to better decision making during returns.
+Rather than evaluate every frame of every play, to increase our computational efficiency we found the optimal next kick-returner location for every $$10^{th}$$ frame of every kick return from 2020. We then computed $$ADOM$$ for every kick returner in this period, which produced the rankings of the 10 best kick return decision makers, for kick returners recording at least 15 kick returns. Note that a lower _ADOM_ corresponds to better decision making during returns.
 
 ![](https://drive.google.com/uc?export=view&id=1_gVAdZ4l3wCvEdPqzApwELf2FIbM9lWV)
 
@@ -190,11 +190,11 @@ To evaluate which players make **critical, high-impact** decisions that result i
 
 ## *AEBO*
 
-The _expected value added_, or _EVA_, of moving from $(x_{i0},y_{i0})$ to the observed next location $(x_{i+1,1},y_{i+1,1})$ in the $i^{th}$ frame is 
+The _expected value added_, or _EVA_, of moving from $$(x_{i0},y_{i0})$$ to the observed next location $$(x_{i+1,1},y_{i+1,1})$$ in the $$i^{th}$$ frame is 
 
 $$EVA_{i,obs} = \hat f( x_{i+1,1}, y_{i+1,1}) - \hat f(x_{i0},y_{i0}).$$
 
-Similarly, the _EVA_ of moving from $(x_{i0},y_{i0})$ to the computed optimal next location $(x_{i+1,*},y_{i+1,*})$ in the $i^{th}$ frame is 
+Similarly, the _EVA_ of moving from $$(x_{i0},y_{i0})$$ to the computed optimal next location $$(x_{i+1,*},y_{i+1,*})$$ in the $i^{th}$ frame is 
 
 $$EVA_{i,*} = \hat f( x_{i+1,*}, y_{i+1,*}) - \hat f(x_{i0},y_{i0}).$$
 
