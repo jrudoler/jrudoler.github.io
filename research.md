@@ -20,3 +20,7 @@ Poster: [Oscillatory and Fractal Biomarkers of Human Memory](http://memory.psych
 
 Undergraduate Research Project: [Optimal EEG Referencing Schemes for Brain State Classification](./files/Referencing_Report.pdf)
 - Analyzing changing electrical potential requires choosing a reference point for the measurement. When we have some set of electrodes recording brain activity in distinct spatial locations in the brain, should they all be referenced the same way? To a common electrode? To their nearest neighboring electrode? To a weighted sum of other electrodes? I discuss a number of approaches, explain how they act as variable "spatial filters", and compare their utility for classifying brain state and memory success.
+
+## Sports Analytics
+
+In my free time I like to dabble in sports analytics a bit. I (along with a few other Penn grad students) was recently named a finalist for the 2022 NFL Big Data Bowl! You can check out our [Kaggle notebook](https://www.kaggle.com/jrudoler56/optimal-run-path-for-kick-returners) as well as the NFL's [press release](https://operations.nfl.com/updates/football-ops/nfl-announces-finalists-for-fourth-annual-nfl-big-data-bowl/) announcing the finalists (which has some more info about the competition). 
