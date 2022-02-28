@@ -4,6 +4,7 @@ title: Music
 permalink: /Music/
 ---
 Here's a sampling of the music I've been listening to recently:
+- *Song I Wrote in My Bedroom*, Anson Seabra
 - *Scenic Drive (The Tape)*, Khalid 
 - *Donda*, Kanye West
 - *OK Orchestra*, AJR
