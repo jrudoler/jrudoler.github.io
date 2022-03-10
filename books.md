@@ -9,8 +9,8 @@ permalink: /Books/
 A running list of things I've been reading...
 
 ## Fiction
+- Exit West (Mohsin Hamid)
 - The Sirens of Titan (Kurt Vonnegut)
-- The Glass Castle (Jeannette Walls)
 - Galapagos (Kurt Vonnegut)
 - Inferno (Dan Brown)
 - A Visit From the Good Squad (Jennifer Egan)
@@ -18,6 +18,7 @@ A running list of things I've been reading...
 - Anna Karenina (Leo Tolstoy)
 
 ## Non-fiction
+- The Glass Castle (Jeannette Walls)
 - Man's Quest for God (Abraham Joshua Heschel)
 - The Signal and the Noise (Nate Silver)
 - An Unquiet Mind: A Memoir of Moods and Madness (Kay Jamison)
