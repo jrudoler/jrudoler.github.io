@@ -23,7 +23,7 @@ Undergraduate Research Project: [Optimal EEG Referencing Schemes for Brain State
 
 ## Sports Analytics
 
-In my free time I like to dabble in sports analytics a bit. I (along with a few other Penn grad students) was recently named a finalist for the 2022 NFL Big Data Bowl! You can check out our [Kaggle notebook](https://www.kaggle.com/jrudoler56/optimal-run-path-for-kick-returners) as well as the NFL's [press release](https://operations.nfl.com/updates/football-ops/nfl-announces-finalists-for-fourth-annual-nfl-big-data-bowl/) announcing the finalists (which has some more info about the competition).
+In my free time I like to dabble in sports analytics a bit. I (along with a few other Penn grad students) was recently named a finalist for the 2022 NFL Big Data Bowl! You can check out our [Kaggle notebook](https://www.kaggle.com/jrudoler56/optimal-run-path-for-kick-returners) as well as the NFL's [press release](https://operations.nfl.com/updates/football-ops/nfl-announces-finalists-for-fourth-annual-nfl-big-data-bowl/) announcing the finalists and my team's [video presentation](https://operations.nfl.com/gameday/analytics/big-data-bowl/2022-big-data-bowl-video-gallery/) of our project.
  
 Our submission showed how high resolution player-tracking data allows us to train a model that predicts the outcome of a kick return, and we develop a framework for using this to compute *optimal return paths* and evaluate player decision-making.
 <img src="/files/bdb.gif" alt="Big Data Bowl" width="600" align="left"/><br clear="left">
