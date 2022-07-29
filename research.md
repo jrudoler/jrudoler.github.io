@@ -9,15 +9,22 @@ I'm interested in signal processing - how to best analyze a noisy signal and lea
 
 Another topic of interest is how we can use machine learning tools to actively predict a person's behavior based on on their brain activity. We're still a ways off from mind-reading, but it's cool stuff. 
 
-## EEG analysis
+## EEG analysis and machine learning applications
 
+### Decoding brain states and improving memory
+Poster: [Decoding and optimizing episodic memory](https://memory.psych.upenn.edu/files/pubs/RudoEtal22b.poster.pdf)
+- In this project we asked whether using machine learning to optimize the timing of item presentations during learning could improve memory performance. We show that, indeed, training classifiers on spectral features of scalp EEG allows us to posively modulate recall in a hybrid spatial navigation and episodic memory task.
+
+### Oscillatory biomarkers of memory
+Preprint: [Hippocampal theta and episodic memory](https://www.biorxiv.org/content/10.1101/2022.03.13.484014)
 Poster: [Oscillatory and Fractal Biomarkers of Human Memory](http://memory.psych.upenn.edu/files/pubs/RudoEtal21.poster.pdf)
 
-- I investigate how a method of distinguishing pink noise in brain recordings from true brain rhythms helps us understand what patterns of brain activity actually relate to successful memory encoding and retrieval. Presented at the *Context and Episodic Memory Symposium* in August 2021.
+- I investigate how a method of distinguishing pink noise in brain recordings from true brain rhythms helps us understand what patterns of brain activity actually relate to successful memory encoding and retrieval. Presented at the *Context and Episodic Memory Symposium* in August 2021 and *Computational and Systems Neuroscience (COSYNE)* in March 2022.
 <!-- -->
 
 <img src="/files/exp_animation.gif" alt="Changing Parameters" width="600" align="left"/><br clear="left">
 
+### EEG pre-processing methods
 Undergraduate Research Project: [Optimal EEG Referencing Schemes for Brain State Classification](./files/Referencing_Report.pdf)
 - Analyzing changing electrical potential requires choosing a reference point for the measurement. When we have some set of electrodes recording brain activity in distinct spatial locations in the brain, should they all be referenced the same way? To a common electrode? To their nearest neighboring electrode? To a weighted sum of other electrodes? I discuss a number of approaches, explain how they act as variable "spatial filters", and compare their utility for classifying brain state and memory success.
 
