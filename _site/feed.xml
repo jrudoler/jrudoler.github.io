@@ -1,4 +1,259 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-06T09:50:54-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joey Rudoler</title><subtitle>Home of a curious data scientist / physicist / musician / literary fanboy</subtitle><entry><title type="html">Modernism is really a bad attempt at the Random Surfing Model</title><link href="http://localhost:4000/blog/2021/07/13/modernism-as-stochasticity.html" rel="alternate" type="text/html" title="Modernism is really a bad attempt at the Random Surfing Model" /><published>2021-07-13T23:00:00-04:00</published><updated>2021-07-13T23:00:00-04:00</updated><id>http://localhost:4000/blog/2021/07/13/modernism-as-stochasticity</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/13/modernism-as-stochasticity.html">&lt;p&gt;&lt;img src=&quot;https://eisnermuseum.org/wp-content/uploads/2019/10/Kandinsky_-_Jaune_Rouge_Bleu.jpg&quot; alt=&quot;Modern Art&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-08-02T14:27:57-04:00</updated><id>/feed.xml</id><title type="html">Joey Rudoler</title><subtitle>Home of a curious data scientist / physicist / musician / literary fanboy</subtitle><entry><title type="html">Optimal Kick Return Paths (NFL Big Data Bowl 2022)</title><link href="/blog/2022/01/06/big-data-bowl.html" rel="alternate" type="text/html" title="Optimal Kick Return Paths (NFL Big Data Bowl 2022)" /><published>2022-01-06T22:00:00-05:00</published><updated>2022-01-06T22:00:00-05:00</updated><id>/blog/2022/01/06/big-data-bowl</id><content type="html" xml:base="/blog/2022/01/06/big-data-bowl.html">&lt;p&gt;The following is not exactly a blog post - rather, it’s my team’s submission to the 2022 NFL Big Data Bowl. The league released three seasons of tracking data from special teams plays, and asked for creative projects using that data to gain insights for NFL teams.&lt;/p&gt;
+
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;The basic question we seek to answer is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;What path should a kick returner take?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Or, in the mind of a data scientist, can we devise a mathematical framework which can tell us the optimal return path for a kick returner given the current distribution of defenders and blockers on the field? This 2022 NFL Big Data Bowl project is our attempt to do so.&lt;/p&gt;
+
+&lt;p&gt;The basic idea is as follows:&lt;/p&gt;
+&lt;h3 id=&quot;model&quot;&gt;Model&lt;/h3&gt;
+&lt;p&gt;We begin by regressing the tracking data of kick returns, as summarized by 100 features, onto the value of a kick return. Note that the &lt;em&gt;value&lt;/em&gt; of a yard line is the expected points of the next score if you start at that yard line, and so the value of a kick return is simply the value of the end yard line of the kick return. This regression yields a function \(\hat{f}\) which, given the tracking data of a kick return frame, returns the expected value of that kick return frame.&lt;/p&gt;
+
+&lt;h3 id=&quot;predict&quot;&gt;Predict&lt;/h3&gt;
+&lt;p&gt;Given \(\hat{f}\) and the tracking data of all players on the field during a given kick return frame, we compute the kick returner’s optimal next location by maximizing \(\hat{f}\) over a set of candidate next locations for the kick returner. With this, we can compute the optimal kick return location at any frame, and we can compute a complete optimal kick return path by repeating the procedure over sequential frames.&lt;/p&gt;
+
+&lt;h3 id=&quot;evaluate-players&quot;&gt;Evaluate players&lt;/h3&gt;
+&lt;p&gt;We conclude our study by comparing actual kick return movements to our computed optimal movements, and by devising a metric to judge a kick returner’s decision making.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-regression&quot;&gt;The Regression&lt;/h1&gt;
+
+&lt;p&gt;We use a multiple linear regression model primarily because we want control over an &lt;em&gt;explicit&lt;/em&gt; model of kick return decision-making with interpretable and actionable weights associated with each input feature. We could instead use a neural network to (potentially) improve predictive power, but neural nets lack interpretability, and so we would not be able to say with any certainty &lt;em&gt;why&lt;/em&gt; our model suggested certain return paths. Of course, predictive power is important, so this is a good area for future work.&lt;/p&gt;
+
+&lt;h2 id=&quot;response-column&quot;&gt;Response Column&lt;/h2&gt;
+
+&lt;p&gt;Our response variable (dependent variable) is \(V\), the “value” of the ending yard line of a kickoff return. We define the value of a yardline \(z\), where \(z\) means \(z\) yards away from scoring a touchdown, as the expected number of points of the next score given that you start with a first down at yard line \(z\). To find \(V_z\) for each \(z\), we simply take the average value of all points of the next score from every first down at yard line \(z\) from 2010 to 2018. Then, we smooth these values. We performed this computation using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nflFastR&lt;/code&gt; data in a separate project [1]. Below is a plot of \(V_z\) as a function of \(z\).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1tbbTe1ws0iG02XtUi2VPHZGHWa64nur8&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the remiander of the project, we use the \(x\) coordinate of the \(\{(x,y)\}\) grid representing the football field, where \(x \in [0,120]\) denotes the yard line, \(y\in [0,53.3]\) denotes the latitude, and the origin \((0,0)\) denotes the bottom left corner of the field. Thus the value of a kick return ending at yardline \(x\) is \(V_{110-x}\).&lt;/p&gt;
+
+&lt;h2 id=&quot;feature-kick-returners-yardline&quot;&gt;Feature: Kick Returner’s Yardline&lt;/h2&gt;
+
+&lt;p&gt;\(x_{kr}\), the \(x\) yardline of the kick return in the current frame, is a feature because the value of a kick return frame depends on how close the kick returner is to the endzone.&lt;/p&gt;
+
+&lt;h2 id=&quot;feature-jth-projected-gap-distance&quot;&gt;Feature: \(j^{th}\)-Projected-Gap-Distance&lt;/h2&gt;
+
+&lt;p&gt;For each \(j \in \{1,...,11\}\), we find the \(y\)-distance to the \(j^{th}\) closest defender when the kick returner is projected onto the average \(x\) location of the defenders. Mathematically, letting \(kr\) be the index of the kick returner, \(dj\) be the index of the \(j^{th}\) closest defender, and \(\theta = -(dir_{kr} - 90)\), the feature is given by
+\(\Delta y_{dj} = (y_{dj} - y_{kr}) + (\frac{1}{11}\sum_{j=1}^{11}x_{dj} - x_{kr})\cdot \tan(\theta).\)&lt;/p&gt;
+
+&lt;p&gt;Here is a picture which illustrates the feature.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1RReSGzmIbjJ8-tV6SWtmBq1s2NrUJv0i&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;indicator-variable-jth-defender-cannot-catch-the-kick-returner&quot;&gt;Indicator Variable: \(j^{th}\)-Defender-Cannot-Catch-The-Kick-Returner&lt;/h2&gt;
+
+&lt;p&gt;Letting \(dj\) denote the \(j^{th}\) closest defender to the kick returner, we want an indicator variable&lt;/p&gt;
+
+\[C_j = \unicode{x1D7D9}\{ dj \text{ cannot catch }  kr\}.\]
+
+&lt;p&gt;We define \(C_j\) as 1 if and only if \(dj\) cannot get to the intersection \(**\) in the explanatory image below before $kr$, which is calculated using the locations, speed, and direction of the \(kr\) and \(dj\). Note that \(C_j\) itself is not a feature, but will be used in a feature below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1rJHev2T2Jn8FqJUkC3jwZKAPfvP_uiZv&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;indicator-variable-jth-defender-is-blocked&quot;&gt;Indicator Variable: \(j^{th}\)-Defender-Is-Blocked&lt;/h2&gt;
+
+&lt;p&gt;Letting $dj$ denote the $j^{th}$ closest defender to the kick returner, we want an indicator variable&lt;/p&gt;
+
+\[B_j = \unicode{x1D7D9}\{ dj \text{ is blocked} \}.\]
+
+&lt;p&gt;We define \(B_j\) as 1 if and only if a blocker can get to the intersection $*$ in the explanatory image below before $dj$, which is calculated using the locations, speed, and direction of the blockers and \(dj\). \(B_j\) itself is not a feature, but will be used in a feature below.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: we assume that each blocker is only able to block a single defender. Defenders and blockers are considered in order of their proximity to the kick returner. For instance, we first consider the closest defender; if a blocker can intercept them, that blocker is ineligible when we consider the second closest defender. Thus, the $j$th defender is blocked if and only if their is an &lt;em&gt;available&lt;/em&gt; defender that can reach intersection $*$ first.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1o35rS5CHW0Cpk3pu83F88sJDvpfUcA29&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;feature-segmented-distance-to-the-jth-closest-defender&quot;&gt;Feature: Segmented Distance to the \(j^{th}\) Closest Defender&lt;/h2&gt;
+
+&lt;p&gt;First, let&lt;/p&gt;
+
+\[A_j = (1-B_j) \cdot (1 - C_j)\]
+
+&lt;p&gt;be the \(j^{th}\)-&lt;em&gt;Able-to-Tackle&lt;/em&gt; indicator variable, which is 1 if and only if the $j^{th}$ defender can catch $kr$ and is not blocked.&lt;/p&gt;
+
+&lt;p&gt;Denote the distance between the kick returner \(kr\) and the \(j^{th}\) closest defender \(dj\) as
+\(d(kr,dj) := \sqrt{(x_{kr}-x_{dj})^2 + (y_{kr}-y_{dj})^2}.\)&lt;/p&gt;
+
+&lt;p&gt;Let \(\lambda_1\) and \(\lambda_2\) be hyperparameters encoding how close \(kr\) and \(dj\) are in terms of \(x\)-distance in yards. For now, we set \(\lambda_1 = 2\) and \(\lambda_2 = 2\). If inclined, we can do a cross validation to determine better values for these hyperparameters.&lt;/p&gt;
+
+&lt;p&gt;Then, in our regression, we want terms indicating the distance of \(kr\) to \(dj\), with different coefficients depending on whether the defender is in front of or behind the kicker, whether the defender is blocked, and whether the defender can catch the kick returner. For example, a defender who is 5 yards away from the kick returner should be treated differently depending on whether he is blocked or not. Also, a defender who is 1 yard away from the kick returner should be treated differently depending on whether he is in front of or behind the returner. Defenders can have a vastly different impact on the outcome of the play depending on these conditions.&lt;/p&gt;
+
+&lt;p&gt;So, for the \(j^{th}\) defender, we have 8 &lt;em&gt;segmented-distance&lt;/em&gt; features:
+\(\begin{align*}
+  &amp;amp; d(kr,dj)  \cdot \unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (\lambda_1,\infty) \} \cdot A_j \\
+  &amp;amp; d(kr,dj) \cdot \unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (\lambda_1,\infty) \} \cdot (1-A_j)  \\
+  &amp;amp; d(kr,dj)  \cdot\unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (0,\lambda_1] \} \cdot A_j \\
+  &amp;amp; d(kr,dj)  \cdot\unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (0,\lambda_1] \} \cdot (1-A_j) \\
+  &amp;amp; d(kr,dj) \cdot \unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (-\lambda_2,0] \} \cdot A_j  \\
+  &amp;amp; d(kr,dj)  \cdot \unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (-\lambda_2,0] \} \cdot (1-A_j) \\
+  &amp;amp; d(kr,dj) \cdot \unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (-\infty, -\lambda_2] \} \cdot A_j  \\
+  &amp;amp; d(kr,dj) \cdot \unicode{x1D7D9}\{ x_{kr} - x_{dj} \in (-\infty, -\lambda_2] \} \cdot (1-A_j)  \\
+\end{align*}\)&lt;/p&gt;
+
+&lt;h2 id=&quot;run-the-regression&quot;&gt;Run the Regression&lt;/h2&gt;
+
+&lt;p&gt;Using these 100 features (1 $x_{kr}$ feature, 11 projected-gap-distance features, and 88 segmented distance features), and our response column $V$, we run an ordinary linear regression to obtain a function $\hat{f}$ which, given the tracking data of all players on the field during a kick return, returns the expected value of the play.&lt;/p&gt;
+
+&lt;p&gt;We train the regression on all kick returns (removing touchbacks) from 2018 and 2019, leaving all kick returns from 2020 as testing data. The out-of-sample rmse is $0.51$, which is fine considering the magnitude of $V$ and how noisy kick returns are.&lt;/p&gt;
+
+&lt;h1 id=&quot;algorithm-choosing-the-optimal-run-path-for-a-kick-returner&quot;&gt;Algorithm: Choosing the Optimal Run Path for a Kick Returner&lt;/h1&gt;
+
+&lt;p&gt;The result of our regression is a function $\hat f$ which, given the $(x,y,s,dir)$ variables of each player on the field during a given kick return frame, outputs the expected value of this kick return.&lt;/p&gt;
+
+&lt;p&gt;To choose the optimal run path for a kick returner, we use a greedy algorithm. The basic idea is that, given the tracking data of all players on the field during the current frame of a kick return, we choose the kick returner’s location for the next frame as the location which maximizes the value of $\hat{f}$, keeping the variables for all the other players the same.&lt;/p&gt;
+
+&lt;p&gt;More specifically, suppose the kick returner’s state at the current frame is given by $(x_{0,kr},y_{0,kr},s_{0,kr},a_{0,kr},dir_{0,kr})$. Let $\mathcal{C}$ denote the set of candidate kick returner states for the next frame. $\mathcal{C}$ consists of 16 equidistant points on the circle centered at $(x_{0,kr},y_{0,kr})$, having radius $s_{0,kr} \cdot \Delta t$, where $\Delta t = 0.1$ seconds is the time difference between frames. Moreover, if $(x_{1,kr},y_{1,kr})$ is a kick returner’s candidate location for the next frame, then his candidate next direction $dir_{1,kr}$ is given by the angle from $(x_{0,kr},y_{0,kr})$ to $(x_{1,kr},y_{1,kr})$, and his candidate next speed is given by $s_{1,kr} = s_{0,kr} + a_{0,kr}\cdot \Delta t.$ Note that his candidate next acceleration $a_{1,kr}$ is irrelevant because acceleration is not used in our features or in $\hat f$. Moreover, we can’t even compute $a_{1,kr}$ because we have no information about the kick returner’s jerk (derivative of his acceleration). In symbols, a kick returner’s optimal next state is given by&lt;/p&gt;
+
+\[(x_{*,kr},y_{*,kr}) := \text{arg}\max_{\mathcal{C}} \hat{f}(x_{1,kr},y_{1,kr},s_{1,kr},dir_{1,kr}).\]
+
+&lt;p&gt;Using our optimization framework, we can construct the kick returner’s optimal return path during a kick return. Our predictions can allow us to:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Visualize and assess a returner’s decision making on individual plays by comparing their observed path to a simulated optimal path.&lt;/li&gt;
+  &lt;li&gt;Establish quantitative metrics for evaluating a returner’s decision-making.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We provide examples and discuss in more detail below.&lt;/p&gt;
+
+&lt;!-- In fact, by substituting $kr$ for the index $j$ of any other player on the field in the above algorithm, we can compute the optimal movement for _any player_ on the field during a kick return. --&gt;
+
+&lt;h1 id=&quot;examples-compare-a-kick-returners-actual-movement-to-his-computed-optimal-movement-over-the-course-of-several-frames&quot;&gt;Examples: Compare a kick returner’s actual movement to his computed optimal movement over the course of several frames.&lt;/h1&gt;
+
+&lt;p&gt;Here, we consider several example kick returns (all real plays from 2020 - our holdout dataset).&lt;/p&gt;
+
+&lt;p&gt;At a given point in each of these kick returns, we start with the actual state of every player on the field, and compute the kick returner’s optimal movement 5 frames ahead. We show the kick returner’s &lt;span style=&quot;color:green&quot;&gt;computed optimal trajectory in green&lt;/span&gt;, and show his &lt;span style=&quot;color:red&quot;&gt;observed trajectory in red&lt;/span&gt;. We also show the observed trajectories of the blockers in black and the &lt;span style=&quot;color:red&quot;&gt;defenders in blue&lt;/span&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-1&quot;&gt;Example 1&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1dJ_RN0bTHUWxdprIDGQlU6BpbtPmGQvx&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the start of this kick return, the kick returner moves southwest, but our algorithm recommends moving northwest. Moving northwest involves going towards the open field, whereas going southwest involves moving towards the blockers.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-2&quot;&gt;Example 2&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1ttJNZAXt5doR_bN1WXYZpiW0mIu0ht7K&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At a critical juncture in this kick return, the kick returner moves backwards to try to run around the entire field, but ends up losing 15 yards. Our algorithm recommends moving slightly forwards and getting tackled.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-3&quot;&gt;Example 3&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1coGBI-9Sh9KIM_ohlv-pQ7kUucpY2wue&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The kick returner moves southwest towards his blockers, but our algorithm recommends moving northwest towards the open field.&lt;/p&gt;
+
+&lt;h1 id=&quot;example-for-each-frame-compare-a-kick-returners-actual-movement-to-his-computed-optimal-movement&quot;&gt;Example: For each frame, compare a kick returner’s actual movement to his computed optimal movement.&lt;/h1&gt;
+
+&lt;p&gt;Here, we consider an example kick return. At each frame, given the actual state of every player on the field, we compute the kick returner’s optimal movement for the next frame. After each frame, we reset the location of each player to his actual location. The animation below shows the kick returner’s actual movement (in red) and the optimal movement at each step (in green), along with the blockers (in black) and the defenders (in blue).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1pjxxuEakx8mulxW4yHq3RSlmWvbgvbTg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the beginning of the return, our algorithm wants the returner to move upwards towards the open field. As the play develops and that option is closed off by defenders, the algorithm changes tactics to try and find the best path that seeks open space and utilizes blockers.&lt;/p&gt;
+
+&lt;p&gt;This visualization - showing the frame-by-frame deviations of the algorithm from the returner’s actual path - should help provide some intuition for the metrics we describe in the following section.&lt;/p&gt;
+
+&lt;h1 id=&quot;two-metrics-for-evaluating-a-kick-returners-decision-making-adom-and-aebo&quot;&gt;Two metrics for evaluating a kick returner’s decision making: &lt;em&gt;ADOM&lt;/em&gt; and &lt;em&gt;AEBO&lt;/em&gt;&lt;/h1&gt;
+
+&lt;h2 id=&quot;adom&quot;&gt;&lt;em&gt;ADOM&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;For the \(i^{th}\) frame, let \((x_{i+1,1},y_{i+1,1})\) be the kick returner’s observed next location, and let \((x_{i+1,*},y_{i+1,*})\) be our computed optimal next location for the kick returner. The distance \(d_i\) between these 2 points is&lt;/p&gt;
+
+\[d_i = \sqrt{(x_{i1}-x_{i*})^2 + (y_{i1}-y_{i*})^2}.\]
+
+&lt;p&gt;We define a kick returner’s &lt;em&gt;average deviation from optimal movement&lt;/em&gt;, or &lt;em&gt;ADOM&lt;/em&gt;, as the distance between the observed and optimal next kick-returner locations averaged over all his kick-return frames,&lt;/p&gt;
+
+\[ADOM := \frac{1}{n} \sum_{\text{frames } i=1}^{n} d_i.\]
+
+&lt;p&gt;A &lt;em&gt;lower&lt;/em&gt; \(ADOM\) indicates better kick-return decision making.&lt;/p&gt;
+
+&lt;p&gt;For instance, the \(ADOM\) of the example kick return shown above is \(0.55\), indicating that the kick returner is on average about a half yard away from optimal movement during that kick return.&lt;/p&gt;
+
+&lt;p&gt;As we used all kick returns from 2018 and 2019 as training data for our regression, this leaves all 2020 kick returns as hold-out testing data.&lt;/p&gt;
+
+&lt;p&gt;Rather than evaluate every frame of every play, to increase our computational efficiency we found the optimal next kick-returner location for every \(10^{th}\) frame of every kick return from 2020. We then computed \(ADOM\) for every kick returner in this period, which produced the rankings of the 10 best kick return decision makers, for kick returners recording at least 15 kick returns. Note that a lower &lt;em&gt;ADOM&lt;/em&gt; corresponds to better decision making during returns.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1_gVAdZ4l3wCvEdPqzApwELf2FIbM9lWV&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To understand how &lt;em&gt;ADOM&lt;/em&gt; relates to a more familiar metric used to judge kick returns, average return yardage, we plot &lt;em&gt;ADOM&lt;/em&gt; vs. avg. return yardage below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1CKkXoh8kWIdFoK0ZWnX9Q3kzk_htEqrw&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There is no clear relationship across returners between ADOM and Average Return Yardage. This is not necessarily surprising; ADOM is not directly an outcome-based metric, meaning that it only reflects how close the returner’s decisions are to the optimal decisions - ADOM does not tell us anything about the yardage that those decisions earn. So, a lower ADOM does not necessarily directly correspond to higher return yardage. ADOM weighs all decisions equally, so it reflects which players make good decisions &lt;strong&gt;consistently&lt;/strong&gt; - not which players make critical good decisions resulting in high yardage gains. Inconsistent players and so-called “home run hitters” who take high-variance strategies might have high yardage numbers but a low ADOM.&lt;/p&gt;
+
+&lt;p&gt;To evaluate which players make &lt;strong&gt;critical, high-impact&lt;/strong&gt; decisions that result in large yardage gains, we develop another metric.&lt;/p&gt;
+
+&lt;h2 id=&quot;aebo&quot;&gt;&lt;em&gt;AEBO&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;The &lt;em&gt;expected value added&lt;/em&gt;, or &lt;em&gt;EVA&lt;/em&gt;, of moving from \((x_{i0},y_{i0})\) to the observed next location \((x_{i+1,1},y_{i+1,1})\) in the \(i^{th}\) frame is&lt;/p&gt;
+
+\[EVA_{i,obs} = \hat f( x_{i+1,1}, y_{i+1,1}) - \hat f(x_{i0},y_{i0}).\]
+
+&lt;p&gt;Similarly, the &lt;em&gt;EVA&lt;/em&gt; of moving from \((x_{i0},y_{i0})\) to the computed optimal next location \((x_{i+1,*},y_{i+1,*})\) in the $i^{th}$ frame is&lt;/p&gt;
+
+\[EVA_{i,*} = \hat f( x_{i+1,*}, y_{i+1,*}) - \hat f(x_{i0},y_{i0}).\]
+
+&lt;p&gt;We define a kick returner’s &lt;em&gt;average EVA below optimal&lt;/em&gt;, or &lt;em&gt;AEBO&lt;/em&gt;, as the difference in optimal EVA and observed EVA averaged over all his kick-return frames,&lt;/p&gt;
+
+\[AEBO := \frac{1}{n} \sum_{\text{frames } i=1}^{n} \big( EVA_{i,*} - EVA_{i,obs} \big).\]
+
+&lt;p&gt;We computed $AEBO$ on the same dataset on which we computed &lt;em&gt;ADOM&lt;/em&gt;, producing another ranking of the 10 best kick return decision makers, for kick returners recording at least 15 kick returns.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1unLj2w3u-IeYeEKHygQakSNBxLyweMuC&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;lower&lt;/em&gt; $AEBO$ indicates better &lt;strong&gt;critical&lt;/strong&gt; kick-return decision making. AEBO accomplishes this because it evaluates the &lt;em&gt;difference in predicted outcomes&lt;/em&gt; based on decisions, rather than the difference in the decisions themselves. Therefore, it does not value all decisions equally - decisions are effectively weighted by their importance (as measured by EVA).&lt;/p&gt;
+
+&lt;p&gt;As before, we plot &lt;em&gt;AEBO&lt;/em&gt; vs. avg. return yardage to gain insight on our metric.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1FvPVxE2RuFD3aCNZL8mcABZ9z3JzcMV5&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The correlation between AEBO and Average Return Yardage is striking - clearly players with a lower AEBO (and therefore better critical decision making) earn more yards.&lt;/p&gt;
+
+&lt;p&gt;This result, which comes from held out data (not the data our model was trained on), provides evidence that our model and our approach are valid. Our approach led to a metric &lt;em&gt;AEBO&lt;/em&gt;, which gave us a way to evaluate kick returners and produced a ranking that matched our intuition of what it means to be a good kick returner - highly ranked players have high average  return yardage. Hence we feel validated in our approach.&lt;/p&gt;
+
+&lt;p&gt;Moreover, &lt;em&gt;AEBO&lt;/em&gt; is blind to the &lt;em&gt;final&lt;/em&gt; outcome of a kick return, yet players with a low &lt;em&gt;AEBO&lt;/em&gt; are the players with a high avg. return yardage! This is a fantastic insight because it gives us a way of finding &lt;strong&gt;hidden value&lt;/strong&gt;. NFL teams want players who produce a high avg. return yardage. Unfortunately, the final outcome of a kick return is very noisy, because players can benefit from an exceptional block or a lucky missed tackle, for instace. &lt;em&gt;AEBO&lt;/em&gt; mitigates this noise by aggregating over &lt;em&gt;all&lt;/em&gt; of a kick returner’s frames, not just his final outcomes.&lt;/p&gt;
+
+&lt;p&gt;NFL teams should consider using &lt;em&gt;AEBO&lt;/em&gt; as a tool to evaluate a kick returner’s value. Players with a low &lt;em&gt;AEBO&lt;/em&gt; might be undervalued - they may be due for an increase in yardage sooner rather than later. On the other hand, players with a high &lt;em&gt;AEBO&lt;/em&gt; may be overrated - perhaps they’re just getting lucky and are due for a regression when their poor decision-making catches up with them.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;We devised a novel framework for computing the optimal return path for a kick returner. Our pipeline of regressing kick return tracking data on the value of a kick return gave us a function $\hat f$ to compute the expected value of a kick return frame, and we maximized this $\hat{f}$ to find the next location for a kick returner to move to.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We used our algorithm to evaluate kick returner’s decision making and to examine critical junctures in kick returns. This is potentially valuable for NFL coaches to show players where they could have made better decisions.&lt;/li&gt;
+  &lt;li&gt;Our &lt;em&gt;AEBO&lt;/em&gt; metric allows us to quantitatively evaluate a kick returner’s gameplay without being overly reliant on the noisy final outcomes of his kick returns. This is potentially valuable for NFL teams looking to evaluate personnel and find hidden talent.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;future-work&quot;&gt;Future Work&lt;/h2&gt;
+
+&lt;p&gt;There is still much room for improvement, which is expected when working on such a complex problem. Future work includes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Improve the features and consider feature importance.&lt;/li&gt;
+  &lt;li&gt;Consider a deep neural network instead of a regression for $\hat{f}$.&lt;/li&gt;
+  &lt;li&gt;Consider using a minimax-game-tree framework, rather than a greedy algorithm, for computing the optimal return path.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;our-code&quot;&gt;Our Code&lt;/h2&gt;
+
+&lt;p&gt;We wrote all our code in a single &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Colab&lt;/code&gt; file, which can be found at the following link.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://drive.google.com/file/d/1e9kIU5ZTCLfQdKfZP3s1mqFVT_wX-7Gc/view?usp=sharing&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;citations&quot;&gt;Citations&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Value_1st_Down: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1stdown_model1.R&lt;/code&gt; from https://github.com/snoopryan123/x_pts_nfl/tree/main/code2&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;find-us-on-twitter&quot;&gt;Find Us on Twitter&lt;/h2&gt;
+
+&lt;p&gt;Ryan Brill: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@RyanBrill_&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Joey Rudoler: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@JRudoler&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Tai Nguyen: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@taidn97&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><category term="blog" /><summary type="html">The following is not exactly a blog post - rather, it’s my team’s submission to the 2022 NFL Big Data Bowl. The league released three seasons of tracking data from special teams plays, and asked for creative projects using that data to gain insights for NFL teams.</summary></entry><entry><title type="html">Modernism is really a bad attempt at the Random Surfing Model</title><link href="/blog/2021/07/13/modernism-as-stochasticity.html" rel="alternate" type="text/html" title="Modernism is really a bad attempt at the Random Surfing Model" /><published>2021-07-13T23:00:00-04:00</published><updated>2021-07-13T23:00:00-04:00</updated><id>/blog/2021/07/13/modernism-as-stochasticity</id><content type="html" xml:base="/blog/2021/07/13/modernism-as-stochasticity.html">&lt;p&gt;&lt;img src=&quot;https://eisnermuseum.org/wp-content/uploads/2019/10/Kandinsky_-_Jaune_Rouge_Bleu.jpg&quot; alt=&quot;Modern Art&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;lets-talk-about-art&quot;&gt;Let’s talk about art&lt;/h2&gt;
 &lt;p&gt;Throughout my high school and college years, I was constantly baffled by the prominence of an interdisciplinary artistic movement known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Modernism&quot;&gt;Modernism&lt;/a&gt;. As far as I could tell, the only thing about Modern Art that was consistent was that it was confusing and aesthetically unappealing. Think I’m being harsh? Listen to some of John Cage’s &lt;a href=&quot;https://www.youtube.com/watch?v=N0-y8oNDLgU&quot;&gt;prepared piano&lt;/a&gt; and tell me I’m wrong. Anyways, this post will be aimed at trying to talk through my understanding of Modernism, how it’s justified, and why I think it’s still kind of dumb. Disclaimer that my summaries of historical and artistic movements are based 20% off real coursework and 80% off of Wikipedia.&lt;/p&gt;
@@ -20,7 +275,7 @@
 
 &lt;p&gt;I have a problem though, when artists perist with techniques and art forms that are simply not appealing to anyone, with the ideological hope of shattering our learned aesthetic preferences. I’d recommend reading Modernist composer John Cage’s insightful &lt;a href=&quot;https://ciufo.org/classes/ae_sp14/reading/cage_future.pdf&quot;&gt;essay&lt;/a&gt; “The Future of Music: Credo” - the man is brilliant, but clearly has an axe to grind with the established musical precedents. He writes, “If this word “music” is reserved for eighteenth- and nineteenth-century instruments, we can substitute a more meaningful term: organization of sound.” He advocates using noise and electronic sound generators - these ideas ultimately led to the sampling tehcniques prominent in rap and the many types of electronic music that are popular today. He also advocates for atonal music, and famously composed a piece that is just four minutes and thirty three seconds of &lt;a href=&quot;https://www.youtube.com/watch?v=JTEFKFiXSx4&quot;&gt;silence&lt;/a&gt;. I have to say these latter ideas are lost on me. Music is fundamentally mathematical - something Cage was acutely aware of - and the harmonics and tonal systems we tend to like are not coincidental. &lt;a href=&quot;https://www.youtube.com/watch?v=jv2WJMVPQi8&quot;&gt;This&lt;/a&gt; sounds better than &lt;a href=&quot;https://www.youtube.com/watch?v=B_8-B2rNw7s&quot;&gt;this&lt;/a&gt;, end of story.&lt;/p&gt;
 
-&lt;p&gt;But hey, that’s just my opinion. Thanks for reading my ramblings, and please reach out with any related ideas or modern art pieces you think will change my mind!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><summary type="html"></summary></entry><entry><title type="html">Modernism is really a bad attempt at the Random Surfing Model</title><link href="http://localhost:4000/blog/2021/07/13/power-law.html" rel="alternate" type="text/html" title="Modernism is really a bad attempt at the Random Surfing Model" /><published>2021-07-13T23:00:00-04:00</published><updated>2021-07-13T23:00:00-04:00</updated><id>http://localhost:4000/blog/2021/07/13/power-law</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/13/power-law.html">&lt;p&gt;&lt;img src=&quot;https://eisnermuseum.org/wp-content/uploads/2019/10/Kandinsky_-_Jaune_Rouge_Bleu.jpg&quot; alt=&quot;Modern Art&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;But hey, that’s just my opinion. Thanks for reading my ramblings, and please reach out with any related ideas or modern art pieces you think will change my mind!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><summary type="html"></summary></entry><entry><title type="html">Modernism is really a bad attempt at the Random Surfing Model</title><link href="/blog/2021/07/13/power-law.html" rel="alternate" type="text/html" title="Modernism is really a bad attempt at the Random Surfing Model" /><published>2021-07-13T23:00:00-04:00</published><updated>2021-07-13T23:00:00-04:00</updated><id>/blog/2021/07/13/power-law</id><content type="html" xml:base="/blog/2021/07/13/power-law.html">&lt;p&gt;&lt;img src=&quot;https://eisnermuseum.org/wp-content/uploads/2019/10/Kandinsky_-_Jaune_Rouge_Bleu.jpg&quot; alt=&quot;Modern Art&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;lets-talk-about-art&quot;&gt;Let’s talk about art&lt;/h2&gt;
 &lt;p&gt;Throughout my high school and college years, I was constantly baffled by the prominence of an interdisciplinary artistic movement known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Modernism&quot;&gt;Modernism&lt;/a&gt;. As far as I could tell, the only thing about Modern Art that was consistent was that it was confusing and aesthetically unappealing. Think I’m being harsh? Listen to some of John Cage’s &lt;a href=&quot;https://www.youtube.com/watch?v=N0-y8oNDLgU&quot;&gt;prepared piano&lt;/a&gt; and tell me I’m wrong. Anyways, this post will be aimed at trying to talk through my understanding of Modernism, how it’s justified, and why I think it’s still kind of dumb. Disclaimer that my summaries of historical and artistic movements are based 20% off real coursework and 80% off of Wikipedia.&lt;/p&gt;
@@ -42,7 +297,7 @@
 
 &lt;p&gt;I have a problem though, when artists perist with techniques and art forms that are simply not appealing to anyone, with the ideological hope of shattering our learned aesthetic preferences. I’d recommend reading Modernist composer John Cage’s insightful &lt;a href=&quot;https://ciufo.org/classes/ae_sp14/reading/cage_future.pdf&quot;&gt;essay&lt;/a&gt; “The Future of Music: Credo” - the man is brilliant, but clearly has an axe to grind with the established musical precedents. He writes, “If this word “music” is reserved for eighteenth- and nineteenth-century instruments, we can substitute a more meaningful term: organization of sound.” He advocates using noise and electronic sound generators - these ideas ultimately led to the sampling tehcniques prominent in rap and the many types of electronic music that are popular today. He also advocates for atonal music, and famously composed a piece that is just four minutes and thirty three seconds of &lt;a href=&quot;https://www.youtube.com/watch?v=JTEFKFiXSx4&quot;&gt;silence&lt;/a&gt;. I have to say these latter ideas are lost on me. Music is fundamentally mathematical - something Cage was acutely aware of - and the harmonics and tonal systems we tend to like are not coincidental. &lt;a href=&quot;https://www.youtube.com/watch?v=jv2WJMVPQi8&quot;&gt;This&lt;/a&gt; sounds better than &lt;a href=&quot;https://www.youtube.com/watch?v=B_8-B2rNw7s&quot;&gt;this&lt;/a&gt;, end of story.&lt;/p&gt;
 
-&lt;p&gt;But hey, that’s just my opinion. Thanks for reading my ramblings, and please reach out with any related ideas or modern art pieces you think will change my mind!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><summary type="html"></summary></entry><entry><title type="html">First post</title><link href="http://localhost:4000/blog/2021/03/14/first-post.html" rel="alternate" type="text/html" title="First post" /><published>2021-03-14T23:57:13-04:00</published><updated>2021-03-14T23:57:13-04:00</updated><id>http://localhost:4000/blog/2021/03/14/first-post</id><content type="html" xml:base="http://localhost:4000/blog/2021/03/14/first-post.html">&lt;p&gt;I’ve never been much of a blogger, but I guess there’s no time like the present. I have a lot of ideas, so maybe I’ll put them here instead of talking my friends’ ears off.&lt;/p&gt;
+&lt;p&gt;But hey, that’s just my opinion. Thanks for reading my ramblings, and please reach out with any related ideas or modern art pieces you think will change my mind!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><summary type="html"></summary></entry><entry><title type="html">First post</title><link href="/blog/2021/03/14/first-post.html" rel="alternate" type="text/html" title="First post" /><published>2021-03-14T23:57:13-04:00</published><updated>2021-03-14T23:57:13-04:00</updated><id>/blog/2021/03/14/first-post</id><content type="html" xml:base="/blog/2021/03/14/first-post.html">&lt;p&gt;I’ve never been much of a blogger, but I guess there’s no time like the present. I have a lot of ideas, so maybe I’ll put them here instead of talking my friends’ ears off.&lt;/p&gt;
 
 &lt;p&gt;I’m interested in posting about some of the following:&lt;/p&gt;
 &lt;ul&gt;
