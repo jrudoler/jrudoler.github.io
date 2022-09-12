@@ -28,6 +28,13 @@ twitter_username: jrudoler
 github_username:  jrudoler
 google_analytics: G-VEV45Z59DQ
 
+header_pages:
+ - about.markdown
+ - CV.md
+ - books.md
+ - music.md
+ - research.md
+
 # Build settings
 theme: minima 
 plugins:
