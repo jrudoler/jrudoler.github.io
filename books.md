@@ -9,6 +9,8 @@ permalink: /Books/
 A running list of things I've been reading...
 
 ## Fiction
+- The Candy House (Jennifer Egan)
+- Snow Flower and the Secret Fan (Lisa See)
 - Exit West (Mohsin Hamid)
 - The Sirens of Titan (Kurt Vonnegut)
 - Galapagos (Kurt Vonnegut)
@@ -18,6 +20,7 @@ A running list of things I've been reading...
 - Anna Karenina (Leo Tolstoy)
 
 ## Non-fiction
+- Ethical Algorithms (Michael Kearns and Aaron Roth)
 - The Glass Castle (Jeannette Walls)
 - Man's Quest for God (Abraham Joshua Heschel)
 - The Signal and the Noise (Nate Silver)
