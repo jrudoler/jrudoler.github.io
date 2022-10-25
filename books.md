@@ -29,5 +29,6 @@ A running list of things I've been reading...
 - A Brief History of Time (Stephen Hawking)
 
 ## Academic / Educational Texts
+- The Book of Why (Judea Pearl and Dana Mackenzie)
 - Bayesian Data Analysis, Third Edition (Andrew Gelman)
 - Statistical Rethinking (Richard McElreath)
