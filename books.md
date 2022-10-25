@@ -6,7 +6,7 @@ permalink: /Books/
 > "Any brain worth a nickel knows books are good for us." \
 > \- Kurt Vonnegut 
 
-A running list of things I've been reading...
+A non-exhaustive list of things I've been reading (since ~2020)...
 
 ## Fiction
 - The Candy House (Jennifer Egan)
@@ -15,7 +15,7 @@ A running list of things I've been reading...
 - The Sirens of Titan (Kurt Vonnegut)
 - Galapagos (Kurt Vonnegut)
 - Inferno (Dan Brown)
-- A Visit From the Good Squad (Jennifer Egan)
+- A Visit From the Goon Squad (Jennifer Egan)
 - Catch 22 (Joseph Heller)
 - Anna Karenina (Leo Tolstoy)
 
