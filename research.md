@@ -3,11 +3,13 @@ layout: page
 title: Research
 permalink: /Research/
 ---
-Most of my work is related to analyzing electroencephalographic (EEG) recordings - measurements of the changing electrical potential in people's brains caused by neurons firing.
+Most of my research at Penn has focused on analyzing electroencephalographic (EEG) recordings - measurements of the changing electrical potential in people's brains caused by neurons firing.
 
-I'm interested in signal processing - how to best analyze a noisy signal and learn about real-world phenomenon like human cognition. A tremendous amount of effort goes into trying to understand brain recordings.
+A topic of particular interest for the lab I work in is how we can use machine learning to actively predict a person's behavior (like whether or not they will remember a studied item) based on on their brain activity. We're still a ways off from mind-reading, but it's cool stuff. 
 
-Another topic of interest is how we can use machine learning tools to actively predict a person's behavior based on on their brain activity. We're still a ways off from mind-reading, but it's cool stuff. 
+More broadly, I'm deeply interested in machine learning theory, methodology, and applications. There are really two main uses for data: inference (how/why something happened in the past) and prediction (what will happen in the future). We have good tools for both of these, but they rarely work together. 
+Deep learning models, for example, achieve high prediction accuracy but are often criticized for being "black box" models without interpretable parameters. Bayesian approaches explicitly model a data generating process and are therefore highly interpretable, but they require making lots of structural assumptions about probability distributions in real world data that might not be justified - this makes them biased and potentially less robust. Across the board, lots of high-perfoming models have a tendency to overfit training data and consequently fail to make robust predictions out in the wild. 
+A long term interest of mine is developing machine learning methods that are effective tools for both *inference* and *prediction*. These methods need to be both *interpretable* and *robust* - no easy task! I'm in the midst of applying to doctoral programs and hope to devote my career to studying these challenges in data science, along with applications to neuroscience and other fields. 
 
 ## EEG analysis and machine learning applications
 
