@@ -3,6 +3,9 @@ layout: page
 title: Research
 permalink: /Research/
 ---
+> "Little strokes fell great oaks." \
+> \- Benjamin Franklin 
+
 Most of my research at Penn has focused on analyzing electroencephalographic (EEG) recordings - measurements of the changing electrical potential in people's brains caused by neurons firing.
 
 A topic of particular interest for the lab I work in is how we can use machine learning to actively predict a person's behavior (like whether or not they will remember a studied item) based on on their brain activity. We're still a ways off from mind-reading, but it's cool stuff. 
