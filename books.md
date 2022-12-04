@@ -9,6 +9,7 @@ permalink: /Books/
 A non-exhaustive list of things I've been reading (since ~2020)...
 
 ## Fiction
+- American Pastoral (Philip Roth)
 - The Candy House (Jennifer Egan)
 - Snow Flower and the Secret Fan (Lisa See)
 - Exit West (Mohsin Hamid)
@@ -20,6 +21,7 @@ A non-exhaustive list of things I've been reading (since ~2020)...
 - Anna Karenina (Leo Tolstoy)
 
 ## Non-fiction
+- Models of the Mind (Grace Lindsay)
 - Ethical Algorithms (Michael Kearns and Aaron Roth)
 - The Glass Castle (Jeannette Walls)
 - Man's Quest for God (Abraham Joshua Heschel)
