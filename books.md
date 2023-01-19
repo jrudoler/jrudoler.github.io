@@ -9,6 +9,7 @@ permalink: /Books/
 A non-exhaustive list of things I've been reading (since ~2020)...
 
 ## Fiction
+- Welcome to the Monkey House (Kurt Vonnegut)
 - American Pastoral (Philip Roth)
 - The Candy House (Jennifer Egan)
 - Snow Flower and the Secret Fan (Lisa See)
