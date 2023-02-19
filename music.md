@@ -3,10 +3,13 @@ layout: page
 title: Music
 permalink: /Music/
 ---
-Here's a sampling of the music I've been listening to recently:
+Here's a sampling of the music I've been listening to recently (not necessarily new):
+- *The People's Champ*, Quinn XCII
+- *There's Really A Wolf*, Russ
+- *Carry It Well (Acoustic) - Single*, Sam Fischer
+- *Channel Orange*, Frank Ocean
 - *Songs I Wrote in My Bedroom*, Anson Seabra
-- *Scenic Drive (The Tape)*, Khalid 
-- *Donda*, Kanye West
+- *Scenic Drive (The Tape)*, Khalid
 - *OK Orchestra*, AJR
 - *Change of Scenery II*, Quinn XCII
 - *Simple - Single*, Sam Fischer
