@@ -4,6 +4,7 @@ title: Music
 permalink: /Music/
 ---
 Here's a sampling of the music I've been listening to recently (not necessarily new):
+- *NEVER ENOUGH*, Daniel Caesar 
 - *The People's Champ*, Quinn XCII
 - *There's Really A Wolf*, Russ
 - *Carry It Well (Acoustic) - Single*, Sam Fischer
@@ -12,7 +13,6 @@ Here's a sampling of the music I've been listening to recently (not necessarily 
 - *Scenic Drive (The Tape)*, Khalid
 - *OK Orchestra*, AJR
 - *Change of Scenery II*, Quinn XCII
-- *Simple - Single*, Sam Fischer
 - *Blood Harmony*, FINNEAS
 
 And a quick plug for the a cappella album I produced in college: [DynamIX](https://open.spotify.com/album/1I6PeHr9GHensKAAa79PgG)  
