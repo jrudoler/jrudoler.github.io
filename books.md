@@ -9,6 +9,7 @@ permalink: /Books/
 A non-exhaustive list of things I've been reading (since ~2020)...
 
 ## Fiction
+- How High We Go in the Dark (Sequoia Nagamatsu)
 - Welcome to the Monkey House (Kurt Vonnegut)
 - American Pastoral (Philip Roth)
 - The Candy House (Jennifer Egan)
@@ -22,6 +23,7 @@ A non-exhaustive list of things I've been reading (since ~2020)...
 - Anna Karenina (Leo Tolstoy)
 
 ## Non-fiction
+- The Book of Why (Judea Pearl and Dana Mackenzie)
 - Models of the Mind (Grace Lindsay)
 - Ethical Algorithms (Michael Kearns and Aaron Roth)
 - The Glass Castle (Jeannette Walls)
@@ -32,6 +34,7 @@ A non-exhaustive list of things I've been reading (since ~2020)...
 - A Brief History of Time (Stephen Hawking)
 
 ## Academic / Educational Texts
-- The Book of Why (Judea Pearl and Dana Mackenzie)
+- Deep Learning (Ian Goodfellow, Yoshua Bengio, and Aaron Courville)
+- An Introduction to Computational Learning Theory (Michael Kearns and Umesh Vazirani)
 - Bayesian Data Analysis, Third Edition (Andrew Gelman)
 - Statistical Rethinking (Richard McElreath)
