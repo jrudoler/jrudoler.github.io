@@ -11,10 +11,10 @@ permalink: /about/
 >       \- Isaac Watts
 
 
-Hey there! I'm Joey. I'm a graduate student at the University of Pennsylvania, pursuing an MSE in Data Science. I attended Penn for undergrad as well, majoring in Physics & Astronomy with a Concentration in Business and Technology, along with minors in English and Music. 
+Hey there! I'm Joey. I'm a graduate student at the University of Pennsylvania, pursuing an MSE in Data Science. In August 2023, I'll be starting a PhD in Statistics at The Wharton School. I attended Penn for undergrad as well, majoring in Physics & Astronomy with a Concentration in Business and Technology, along with minors in English and Music. 
 
-My focus has increasingly shifted to statistics, data analysis, and machine learning as I try to find my place in a world overwhelmed with data. 
-I am currently doing computational cognitive neuroscience research with Penn’s [Computational Memory Lab](http://memory.psych.upenn.edu/Main_Page), where I analyze brain recordings and model human memory. 
+Over the last few years, my focus has increasingly shifted to statistics and machine learning as I try to find my place in a world overwhelmed with data. 
+I am currently doing research in computational cognitive neuroscience with Penn’s [Computational Memory Lab](http://memory.psych.upenn.edu/Main_Page), where I analyze brain recordings and model human memory. 
 This work involves lots of signal processing and time series analysis while working with pretty massive datasets of high-frequency electrophysiological recordings from hundreds of participants. 
 I also hang out with the [Kording Lab](https://kordinglab.com) to geek out on the connections between biological and aritficial intellegence. 
 I love to think about the world both experientially and mathematically, and earnestly believe we need both perspectives in order to have any idea what's going on around us. 
