@@ -6,22 +6,22 @@ permalink: /Research/
 > "Little strokes fell great oaks." \
 > \- Benjamin Franklin 
 
-Most of my research at Penn has focused on analyzing electroencephalographic (EEG) recordings - measurements of the changing electrical potential in people's brains caused by neurons firing.
+To date, most of my research at Penn has focused on analyzing electroencephalographic (EEG) recordings - measurements of the changing electrical potential in people's brains caused by neurons firing.
+A topic of particular interest for my previous lab is how we can use machine learning to actively predict a person's behavior (like whether or not they will remember a studied item) based on on their brain activity. We're still a ways off from mind-reading, but it's cool stuff. 
 
-A topic of particular interest for the lab I work in is how we can use machine learning to actively predict a person's behavior (like whether or not they will remember a studied item) based on on their brain activity. We're still a ways off from mind-reading, but it's cool stuff. 
-
-More broadly, I'm deeply interested in machine learning theory, methodology, and applications. There are really two main uses for data: inference (how/why something happened in the past) and prediction (what will happen in the future). We have good tools for both of these, but they rarely work together. 
+Looking forward, I'm deeply interested in machine learning theory, methodology, and applications. There are really two main uses for data: inference (how/why something happened in the past) and prediction (what will happen in the future). We have good tools for both of these, but they rarely work together. 
 Deep learning models, for example, achieve high prediction accuracy but are often criticized for being "black box" models without interpretable parameters. Bayesian approaches explicitly model a data generating process and are therefore highly interpretable, but they require making lots of structural assumptions about probability distributions in real world data that might not be justified - this makes them biased and potentially less robust. Across the board, lots of high-perfoming models have a tendency to overfit training data and consequently fail to make robust predictions out in the wild. 
-A long term interest of mine is developing machine learning methods that are effective tools for both *inference* and *prediction*. These methods need to be both *interpretable* and *robust* - no easy task! I hope to devote my time and attention in graduate school and beyond to studying these challenges in data science, along with applications to neuroscience and other fields. 
+
+A long-term interest of mine is developing machine learning methods that are effective tools for both *inference* and *prediction*. These methods need to be both *interpretable* and *robust* - no easy task! I hope to devote my time and attention in graduate school and beyond to studying these challenges in data science, along with applications to neuroscience and other fields. 
 
 ## EEG analysis and machine learning applications
 
 ### Decoding brain states and improving memory
-Poster: [Decoding and optimizing episodic memory](https://memory.psych.upenn.edu/files/pubs/RudoEtal22b.poster.pdf)
-- In this project we asked whether using machine learning to optimize the timing of item presentations during learning could improve memory performance. We show that, indeed, training classifiers on spectral features of scalp EEG allows us to posively modulate recall in a hybrid spatial navigation and episodic memory task.
+Preprint: [Optimizing learning via real-time neural decoding](https://doi.org/10.1101/2023.08.25.553563)
+- In this project we asked whether using machine learning to optimize the timing of item presentations during learning could improve memory performance. 
 
 ### Oscillatory biomarkers of memory
-Paper: [Hippocampal theta and episodic memory](https://www.jneurosci.org/content/43/4/613)
+Paper: [Hippocampal theta and episodic memory](https://www.jneurosci.org/content/43/4/613), *Journal of Neuroscience*
 
 - I investigate how a method of distinguishing pink noise in brain recordings from true brain rhythms helps us understand what patterns of brain activity actually relate to successful memory encoding and retrieval. Presented at the *Context and Episodic Memory Symposium* in August 2021 and *Computational and Systems Neuroscience (COSYNE)* in March 2022.
 <!-- -->
