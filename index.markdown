@@ -4,7 +4,7 @@
 title: What are you doing here? 
 layout: home 
 ---
-Welcome to my personal site! I try to keep it up-to-date with what I'm up to and various things that are on my mind. 
+Welcome to my site! I try to keep it up-to-date with what I'm up to and various things that are on my mind. 
 
 <img src="/images/headshot.jpeg" alt="This is me" width="265" align="right"/>
 
