@@ -19,4 +19,4 @@ This work involves lots of signal processing and time series analysis while work
 I also hang out with the [Kording Lab](https://kordinglab.com) to geek out on the connections between biological and aritficial intellegence. 
 I love to think about the world both experientially and mathematically, and earnestly believe we need both perspectives in order to have any idea what's going on around us. 
 
-I am always excited to learn more and gain exposure to new ideas. Please shoot me an email if you'd be interested in chatting with me or maybe collaborating on a project!
+I am always excited to learn more and gain exposure to new ideas. Please shoot me an email or [schedule a meeting](https://calendly.com/jrudoler/30min) if you'd be interested in chatting with me or maybe collaborating on a project!
