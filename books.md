@@ -9,6 +9,7 @@ permalink: /Books/
 A non-exhaustive list of things I've been reading (since ~2020)...
 
 ## Fiction
+- The Sun Also Rises (Ernest Hemingway)
 - How High We Go in the Dark (Sequoia Nagamatsu)
 - Welcome to the Monkey House (Kurt Vonnegut)
 - American Pastoral (Philip Roth)
@@ -23,6 +24,7 @@ A non-exhaustive list of things I've been reading (since ~2020)...
 - Anna Karenina (Leo Tolstoy)
 
 ## Non-fiction
+- Surely You're Joking, Mr. Feynman (Richard Feynman)
 - The Book of Why (Judea Pearl and Dana Mackenzie)
 - Models of the Mind (Grace Lindsay)
 - Ethical Algorithms (Michael Kearns and Aaron Roth)
