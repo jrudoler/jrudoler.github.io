@@ -18,7 +18,9 @@ A long-term interest of mine is developing machine learning methods that are eff
 
 ### Decoding brain states and improving memory
 Preprint: [Optimizing learning via real-time neural decoding](https://doi.org/10.1101/2023.08.25.553563)
-- In this project we asked whether using machine learning to optimize the timing of item presentations during learning could improve memory performance. 
+- In this project we asked whether using machine learning to optimize the timing of item presentations during learning could improve memory performance. Presented as a poster at the *Cognitive Neuroscience Society (CNS)* annual meeting, *Context and Episodic Memory Symposium*, and *MathPsych* in spring/summer 2022.  
+
+
 
 ### Oscillatory biomarkers of memory
 Paper: [Hippocampal theta and episodic memory](https://www.jneurosci.org/content/43/4/613), *Journal of Neuroscience*
