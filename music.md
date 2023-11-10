@@ -4,6 +4,7 @@ title: Music
 permalink: /Music/
 ---
 Here's a sampling of the music I've been listening to recently (not necessarily new):
+- *SOS*, SZA
 - *NEVER ENOUGH*, Daniel Caesar 
 - *The People's Champ*, Quinn XCII
 - *There's Really A Wolf*, Russ

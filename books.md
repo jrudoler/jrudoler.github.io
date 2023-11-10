@@ -9,6 +9,7 @@ permalink: /Books/
 A non-exhaustive list of things I've been reading (since ~2020)...
 
 ## Fiction
+- The Plot Against America (Philip Roth)
 - The Sun Also Rises (Ernest Hemingway)
 - How High We Go in the Dark (Sequoia Nagamatsu)
 - Welcome to the Monkey House (Kurt Vonnegut)
