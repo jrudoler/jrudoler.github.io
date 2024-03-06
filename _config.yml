@@ -26,15 +26,14 @@ author:
   pronouns         : # example: "he/him"  
   bio              : "A poorly focused physicist-turned-neuroscientist-turned-statistician who actually would rather write a novel."
   location         : "Philadelphia, PA, USA"
-  employer         : "The Wharton School, University of Pennsylvania"
+  employer         : "The Wharton School @ UPenn"
   email            : "jrudoler@wharton.upenn.edu"
   github           : "jrudoler"
   orcid            : "https://orcid.org/0000-0001-9910-6515" 
   googlescholar    : "https://scholar.google.com/citations?user=27hegtkAAAAJ&hl=en"
+  twitter          : "jrudoler"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jrudoler
-#github_username:  jrudoler
 #google_analytics: G-VEV45Z59DQ
 
 include:
