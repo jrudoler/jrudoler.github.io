@@ -2,7 +2,7 @@
 layout: archive
 title: Research
 author_profile: true
-permalink: /Research/
+permalink: /research/
 ---
 > "Little strokes fell great oaks." \
 > \- Benjamin Franklin 
