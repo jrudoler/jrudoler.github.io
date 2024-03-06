@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: archive
 title: Research
+author_profile: true
 permalink: /Research/
 ---
 > "Little strokes fell great oaks." \

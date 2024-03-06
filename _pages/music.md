@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: archive
 title: Music
-permalink: /Music/
+permalink: /music/
+author_profile: true
 ---
 Here's a sampling of the music I've been listening to recently (not necessarily new):
 - *SOS*, SZA

@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: archive
 title: Books
-permalink: /Books/
+permalink: /books/
+author_profile: true
 ---
 > "Any brain worth a nickel knows books are good for us." \
 > \- Kurt Vonnegut 

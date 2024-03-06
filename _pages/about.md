@@ -1,7 +1,9 @@
 ---
-layout: page
-title: About
+layout: home
+title: "About"
 permalink: /about/
+author_profile: true
+
 ---
 <img src="/images/tetons_wall.jpg" alt="This is me" hspace="30" vspace="20" width="300" align="right"/>
 > In works of labour, or of skill,\
