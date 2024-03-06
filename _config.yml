@@ -52,7 +52,7 @@ permalink: /:categories/:title/
 
 
 # Build settings
-theme: minimal-mistakes-jekyll 
+#theme: minimal-mistakes-jekyll 
 remote_theme: https://github.com/mmistakes/minimal-mistakes
 plugins:
   - jekyll-remote-theme
