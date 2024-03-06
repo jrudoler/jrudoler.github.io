@@ -19,6 +19,7 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
   gem "jekyll-remote-theme"
+  gem 'jekyll-include-cache'
   gem 'hawkins'
   gem "webrick", "~> 1.8"
 end
