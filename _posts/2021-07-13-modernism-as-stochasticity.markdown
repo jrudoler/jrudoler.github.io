@@ -4,7 +4,7 @@ title:  "Modernism is really a bad attempt at the Random Surfing Model"
 date:   2021-07-13 23:00:00 -0400
 categories: blog
 ---
-![Modern Art](https://eisnermuseum.org/wp-content/uploads/2019/10/Kandinsky_-_Jaune_Rouge_Bleu.jpg)
+[Modern Art](../images/modern_art.jpeg)
 
 ## Let's talk about art
 Throughout my high school and college years, I was constantly baffled by the prominence of an interdisciplinary artistic movement known as [Modernism](https://en.wikipedia.org/wiki/Modernism). As far as I could tell, the only thing about Modern Art that was consistent was that it was confusing and aesthetically unappealing. Think I'm being harsh? Listen to some of John Cage's [prepared piano](https://www.youtube.com/watch?v=N0-y8oNDLgU) and tell me I'm wrong. Anyways, this post will be aimed at trying to talk through my understanding of Modernism, how it's justified, and why I think it's still kind of dumb. Disclaimer that my summaries of historical and artistic movements are based 20% off real coursework and 80% off of Wikipedia.

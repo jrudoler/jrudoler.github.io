@@ -21,4 +21,6 @@ While working for the lab I finished a part-time engineering Master's in Data Sc
 I was drawn to statistics and machine learning through a desire to find my place in a world overwhelmed with data. There are many diverse problems I want to tackle (probably too many), but you can read a brief overview of my past [research](https://jrudoler.com/Research/) and current interests. 
 I love to think about the world both experientially and mathematically, and earnestly believe we need both perspectives in order to have any idea what's going on around us. 
 
+You can check out my CV [here](../files/RudolerCV.pdf).
+
 I am always excited to learn more or think about something new. Please shoot me an email or [schedule a meeting](https://calendly.com/jrudoler/30min) if you'd be interested in chatting with me or maybe collaborating on a project!
