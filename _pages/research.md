@@ -20,7 +20,7 @@ A long-term interest of mine is developing machine learning methods that are eff
 ### Working towards foundation models for neural data
 My master's thesis was about training deep neural nets to predict behavior (in particular, memory) from neural data aggregated across different people. 
 This is an instance of a type of transfer learning called domain adaptation -- 
-essentially you want the model to learn some shared properties of neural activity across brains so that it can predict neural activity in a brain that it's never seen before. This is similar in spirit to how large language models are train on large corpora of text so they can learn properties of natural language that generalize to new language-related tasks. 
+essentially you want the model to learn some shared properties of neural activity across brains so that it can predict neural activity in a brain that it's never seen before. This is similar in spirit to how large language models are trained on large corpora of text so they can learn properties of natural language that generalize to new language-related tasks. 
 
 While my work was recognized by an award from my department, we didn't really have any publishable results. Since then, similar work has come out showing that this kind of approach is successful for many tasks with stronger neural correlates than memory (e.g. motor tasks, sleep stages, stress/emotion, etc.). I'm not actively working on this but think it's a super cool and promising research direction.  
 
