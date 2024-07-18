@@ -40,6 +40,9 @@ A non-exhaustive list of things I've been reading (since ~2020)...
 - *A Brief History of Time* (Stephen Hawking)
 
 ## Academic / Educational Texts
+- *Learning with Kernels: Support Vector Machines, Regularization, Optimization, and Beyond* (Bernhard Scholkopf and Alexander J. Smola)
+- *Testing Statistical Hypotheses* (E.L. Lehmann and Joseph P. Romano)
+- *Patterns, Predictions, and Actions* (Moritz Hardt and Benjamin Recht)
 - *Probability: Theory and Examples* (Rick Durrett)
 - *Deep Learning* (Ian Goodfellow, Yoshua Bengio, and Aaron Courville)
 - *An Introduction to Computational Learning Theory* (Michael Kearns and Umesh Vazirani)
