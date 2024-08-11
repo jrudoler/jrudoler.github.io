@@ -25,7 +25,7 @@ essentially you want the model to learn some shared properties of neural activit
 While my work was recognized by an award from my department, we didn't really have any publishable results. Since then, similar work has come out showing that this kind of approach is successful for many tasks with stronger neural correlates than memory (e.g. motor tasks, sleep stages, stress/emotion, etc.). I'm not actively working on this but think it's a super cool and promising research direction.  
 
 ### Decoding brain states and improving memory
-Preprint: [Optimizing learning via real-time neural decoding](https://doi.org/10.1101/2023.08.25.553563)
+Paper: [Decoding EEG for optimizing naturalistic memory](https://www.sciencedirect.com/science/article/abs/pii/S0165027024001651), *Journal of Neuroscience Methods*
 - In this project we asked whether using machine learning to optimize the timing of item presentations during learning could improve memory performance. Presented as a poster at the *Cognitive Neuroscience Society (CNS)* annual meeting, *Context and Episodic Memory Symposium*, and *MathPsych* in spring/summer 2022.  
 
 
