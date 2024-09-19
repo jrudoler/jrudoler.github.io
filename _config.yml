@@ -42,6 +42,12 @@ include:
   - files
 permalink: /:categories/:title/
 
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:path/
+
+
 #category_archive:
 #  type: liquid
 #  path: /categories/
