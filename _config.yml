@@ -33,6 +33,7 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=27hegtkAAAAJ&hl=en"
   twitter          : "jrudoler"
   linkedin         : "joseph-rudoler"
+  bluesky          : "jrudoler"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #google_analytics: G-VEV45Z59DQ
