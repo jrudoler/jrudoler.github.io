@@ -4,6 +4,8 @@ main:
     url: /
   - title: "Research"
     url: /research/
+  - title: "Teaching"
+    url: /teaching/
   - title: "Music"
     url: /music/
   - title: "Books"
