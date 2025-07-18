@@ -1,9 +1,9 @@
 ---
 layout: archive
-title: Research
+title: Teaching
 toc: true
 author_profile: true
-permalink: /research/
+permalink: /teaching/
 ---
 > "If you want to master something, teach it." \
 > \- Richard Feynman
