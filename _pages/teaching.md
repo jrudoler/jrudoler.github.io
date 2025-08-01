@@ -17,4 +17,8 @@ I have served as a TA for the following courses at Wharton:
 - STAT4010 (Sports Analytics Captsone)
 - STAT4100 (Data Collection and Acquisition)
 
-I am also in the process of developing a new course for introductory statistics and data science. Titled "Understanding Uncertainty", the course avoids much of the standard statistical machinary in favor of an approach that focuses heavily on sampling and programmatic simulation. The course website will contain all of the lecture material and assignments and can be found [here](https://jrudoler-teaching.github.io/understanding-uncertainty/).
+I am also in the process of developing a new course for introductory statistics and data science. Titled "Understanding Uncertainty", the course avoids much of the standard statistical machinary in favor of an approach that focuses heavily on sampling and programmatic simulation. 
+
+The course website contains all of the lecture material and assignments and can be found [here](https://jrudoler-teaching.github.io/understanding-uncertainty/).
+
+<img src="/images/uncertainty-course-screenshot.png" alt="Understanding Uncertainty Course" style="width: 100%; max-width: 600px;">

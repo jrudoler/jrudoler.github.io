@@ -36,7 +36,7 @@ author:
   bluesky          : "jrudoler.bsky.social"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#google_analytics: G-VEV45Z59DQ
+google_analytics: G-VEV45Z59DQ
 
 include:
   - _pages
