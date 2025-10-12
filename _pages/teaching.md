@@ -9,8 +9,10 @@ permalink: /teaching/
 > "If you want to master something, teach it." \
 > \- Richard Feynman
 
-<!-- Add image of Joey teaching a class on the right side of the page -->
-<img src="/images/stat6130_lecture.png" alt="STAT6130 Lecture" style="width: 100%; max-width: 300px; float: right; margin-left: 20px; margin-bottom: 20px;">
+<!-- Add image of Joey teaching a class on the right side of the page, caption below -->
+<figure style="float: right; margin-left: 20px; margin-bottom: 20px; text-align: center;">
+  <img src="/images/stat6130_lecture.png" alt="STAT6130 Lecture" style="width: 100%; max-width: 400px;">
+</figure>
 
 I owe a lot to the wonderful teachers and mentors I've had over the years (not just in mathematics -- it was one of my English professors who convinced me to do a PhD!)
 
@@ -20,7 +22,9 @@ I recently authored and taught a new course for introductory statistics and data
 
 The course website contains all of the lecture material and assignments and can be found [here](https://jrudoler-teaching.github.io/understanding-uncertainty/).
 
-<img src="/images/uncertainty-course-screenshot.png" alt="Understanding Uncertainty Course" style="width: 100%; max-width: 600px;">
+<a href="https://jrudoler-teaching.github.io/understanding-uncertainty/">
+  <img src="/images/uncertainty-course-screenshot.png" alt="Understanding Uncertainty Course" style="width: 100%; max-width: 600px;">
+</a>
 
 I have also served as a TA for the following courses at Wharton:
 
