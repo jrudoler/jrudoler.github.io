@@ -7,7 +7,7 @@ permalink: /
 author_profile: true
 ---
 
-![This is me](/images/tetons_wall.jpg){: style="float: right; margin: 20px 0 20px 30px; width: 300px;" }
+![This is me](/images/tetons_wall.jpg){: style="float: right; margin: 40px 0 40px 50px; width: 300px;" }
 
 > In works of labour, or of skill,  
 > I would be busy too;  
@@ -16,6 +16,8 @@ author_profile: true
 > \- Isaac Watts
 
 I'm a graduate student at The Wharton School, pursuing a PhD in Statistics and Data Science. I am broadly interested in statistical machine learning, and am gratefully advised by Edgar Dobriban.
+
+Currently, I am working at Tel Aviv University as visiting scholar in the Blavatnik School of Computer Science and AI, hosted by [Nadav Cohen](https://www.cohennadav.com).
 
 Before starting my PhD, I worked as a software engineer facilitating computational cognitive neuroscience research at Penn’s [Computational Memory Lab](http://memory.psych.upenn.edu/Main_Page). While working for the lab I finished a part-time engineering master's in Data Science, which included a thesis supervised by [Konrad Kording](https://kordinglab.com/). I attended Penn for undergrad as well, majoring in Physics & Astronomy with a Concentration in Business and Technology, along with minors in English and Music.
 
