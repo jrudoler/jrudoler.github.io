@@ -1,5 +1,6 @@
 ---
 layout: archive
+classes: wide
 title: Books
 permalink: /books/
 author_profile: true
@@ -12,6 +13,7 @@ A non-exhaustive list of some things I've been reading (since ~2020)...
 
 ## Fiction
 
+- _The Muralist_ (B.A. Shapiro)
 - _The Circle_ (Dave Eggers)
 - _A World of Curiosities_ (Louise Penny)
 - _Portrait of an Artist as a Young Man_ (James Joyce)

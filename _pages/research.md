@@ -1,5 +1,6 @@
 ---
 layout: archive
+classes: wide
 title: Research
 toc: true
 author_profile: true
