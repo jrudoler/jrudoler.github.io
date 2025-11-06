@@ -23,10 +23,10 @@ author:
   # Biographic information
   avatar           : "/images/headshot.jpeg"
   name             : "Joey Rudoler"
-  pronouns         : # example: "he/him"  
+  pronouns         : "he/him"  
   bio              : "A poorly focused physicist-turned-neuroscientist-turned-statistician."
   location         : "Philadelphia, PA, USA"
-  employer         : "The Wharton School @ UPenn"
+  employer         : "UPenn / Wharton"
   email            : "jrudoler@wharton.upenn.edu"
   github           : "jrudoler"
   orcid            : "https://orcid.org/0000-0001-9910-6515" 
@@ -47,6 +47,20 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
+  news:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      share: false
+      related: false
 
 
 #category_archive:

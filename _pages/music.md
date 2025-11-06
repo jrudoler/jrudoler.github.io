@@ -6,6 +6,9 @@ permalink: /music/
 author_profile: true
 ---
 Here's a sampling of the music I've been listening to recently (not necessarily new):
+- *Deadbeat*, Tame Impala
+- *STAR LINE*, Chance the Rapper
+- *סוף חמה לבוא*, Ishay Ribo
 - *SOS*, SZA
 - *NEVER ENOUGH*, Daniel Caesar 
 - *The People's Champ*, Quinn XCII
@@ -13,10 +16,6 @@ Here's a sampling of the music I've been listening to recently (not necessarily 
 - *Carry It Well (Acoustic) - Single*, Sam Fischer
 - *Channel Orange*, Frank Ocean
 - *Songs I Wrote in My Bedroom*, Anson Seabra
-- *Scenic Drive (The Tape)*, Khalid
-- *OK Orchestra*, AJR
-- *Change of Scenery II*, Quinn XCII
-- *Blood Harmony*, FINNEAS
 
 And a quick plug for the a cappella album I produced in college: [DynamIX](https://open.spotify.com/album/1I6PeHr9GHensKAAa79PgG)  
 

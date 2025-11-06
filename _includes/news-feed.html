@@ -1,0 +1,68 @@
+{% assign news_items = site.news | sort: 'date' | reverse %}
+{% if include.limit %}
+  {% assign news_items = news_items | slice: 0, include.limit %}
+{% endif %}
+{% assign section_title = include.title | default: "Announcements" %}
+{% assign date_format = include.date_format | default: "%m/%d/%Y" %}
+{% assign empty_message = include.empty_message | default: "No announcements yet." %}
+{% assign scrollable = include.scrollable | default: false %}
+{% assign max_height = include.max_height | default: "60vw" %}
+{% assign table_classes = include.table_classes | default: "table table-sm table-borderless" %}
+{% assign show_summary = include.show_summary %}
+{% if show_summary == nil %}
+  {% assign show_summary = true %}
+{% endif %}
+{% assign scroll_attr = "" %}
+{% if scrollable %}
+  {% assign scroll_attr = ' style="max-height: ' | append: max_height | append: '; overflow-y: auto;"' %}
+{% endif %}
+
+<div class="news-feed">
+  {% if section_title %}
+  <h2 class="news-feed__title">{{ section_title }}</h2>
+  {% endif %}
+
+  {% if news_items and news_items.size > 0 %}
+  <div class="news-feed__table{% if scrollable %} news-feed__table--scrollable{% endif %}"{{ scroll_attr }}>
+    <table class="{{ table_classes }}">
+      <tbody>
+        {% for item in news_items %}
+        <tr>
+          <th scope="row" class="news-feed__date"{% unless item.date %} aria-hidden="true"{% endunless %}>{% if item.date %}{{ item.date | date: date_format }}{% endif %}</th>
+          <td class="news-feed__entry">
+            {% if item.inline %}
+              {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+            {% else %}
+              {% if item.link %}
+                <a class="news-feed__item-title" href="{{ item.link }}" rel="noopener">{{ item.title }}</a>
+              {% else %}
+                <a class="news-feed__item-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% endif %}
+            {% endif %}
+            {% if show_summary %}
+              {% assign item_summary = item.summary %}
+              {% if item_summary == nil or item_summary == "" %}
+                {% capture item_summary %}{{ item.content | strip }}{% endcapture %}
+              {% endif %}
+              {% assign rendered_summary = item_summary | markdownify | strip %}
+              {% if rendered_summary != "" %}
+              <div class="news-feed__summary">{{ rendered_summary }}</div>
+              {% endif %}
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% if include.more_url or include.show_more_link %}
+    {% assign more_url = include.more_url | default: '/news/' %}
+    <p class="news-feed__more"><a href="{{ more_url | relative_url }}">View all announcements →</a></p>
+  {% endif %}
+  {% else %}
+    {% if empty_message %}
+    <p class="news-feed__empty">{{ empty_message }}</p>
+    {% endif %}
+  {% endif %}
+</div>
+

@@ -7,13 +7,12 @@ permalink: /teaching/
 author_profile: true
 ---
 
+<figure style="float: right; margin-left: 20px; margin-bottom: 20px; text-align: center;">
+  <img src="/images/stat6130_lecture.png" alt="STAT6130 Lecture" style="width: 100%; max-width: 300px;">
+</figure>
+
 > "If you want to master something, teach it." \
 > \- Richard Feynman
-
-<!-- Add image of Joey teaching a class on the right side of the page, caption below -->
-<figure style="float: right; margin-left: 20px; margin-bottom: 20px; text-align: center;">
-  <img src="/images/stat6130_lecture.png" alt="STAT6130 Lecture" style="width: 100%; max-width: 400px;">
-</figure>
 
 I owe a lot to the wonderful teachers and mentors I've had over the years (not just in mathematics -- it was one of my English professors who convinced me to do a PhD!)
 

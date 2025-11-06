@@ -5,6 +5,9 @@ title: About
 toc: true
 permalink: /
 author_profile: true
+show_news_feed: true
+news_feed_title: "Announcements"
+news_feed_limit: 5
 ---
 
 ![This is me](/images/tetons_wall.jpg){: style="float: right; margin: 40px 0 40px 50px; width: 300px;" }
@@ -23,6 +26,10 @@ Before starting my PhD, I worked as a software engineer facilitating computation
 
 I was drawn to statistics and machine learning through a desire to find my place in a world overwhelmed with data. There are many diverse problems I want to tackle (probably too many), but you can read a brief overview of my past [research](https://jrudoler.com/research/) and current interests. I love to think about the world both experientially and mathematically, and earnestly believe we need both perspectives in order to have any idea what's going on around us.
 
-You can check out my CV [here](../files/RudolerCV.pdf).
+You can check out [my CV (PDF)](../files/RudolerCV.pdf).
 
 I am always excited to learn more or think about something new. Please shoot me an email or [schedule a meeting](https://fantastical.app/jhrudoler/30-min) if you'd be interested in chatting with me or maybe collaborating on a project!
+
+{% if page.show_news_feed %}
+{% include news-feed.html title=page.news_feed_title limit=page.news_feed_limit show_more_link=true more_url='/news/' %}
+{% endif %}

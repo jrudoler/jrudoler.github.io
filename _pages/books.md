@@ -13,6 +13,7 @@ A non-exhaustive list of some things I've been reading (since ~2020)...
 
 ## Fiction
 
+- _The Exchange_ (John Grisham)
 - _The Muralist_ (B.A. Shapiro)
 - _The Circle_ (Dave Eggers)
 - _A World of Curiosities_ (Louise Penny)
