@@ -10,13 +10,13 @@ news_feed_title: "Announcements"
 news_feed_limit: 5
 ---
 
-![This is me](/images/tetons_wall.jpg){: style="float: right; margin: 40px 0 40px 50px; width: 300px;" }
-
 > In works of labour, or of skill,  
 > I would be busy too;  
 > For Satan finds some mischief still,  
 > For idle hands to do.  
 > \- Isaac Watts
+
+![This is me](/images/tetons_wall.jpg){: style="float: right; margin: 40px 0 40px 50px; width: 300px;" }
 
 I'm a graduate student at The Wharton School, pursuing a PhD in Statistics and Data Science. I am broadly interested in statistical machine learning, and am gratefully advised by Edgar Dobriban.
 
