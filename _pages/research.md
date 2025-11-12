@@ -9,13 +9,27 @@ permalink: /research/
 > "Little strokes fell great oaks." \
 > \- Benjamin Franklin 
 
-To date, most of my research at Penn has focused on analyzing electroencephalographic (EEG) recordings - measurements of the changing electrical potential in people's brains caused by neurons firing.
+Initially, most of my research at Penn focused on analyzing electroencephalographic (EEG) recordings - measurements of the changing electrical potential in people's brains caused by neurons firing.
 A topic of particular interest for my previous lab is how we can use machine learning to actively predict a person's behavior (like whether or not they will remember a studied item) based on on their brain activity. We're still a ways off from mind-reading, but it's cool stuff. 
 
-Looking forward, I'm deeply interested in machine learning theory, methodology, and applications. There are really two main uses for data: inference (how/why something happened in the past) and prediction (what will happen in the future). We have good tools for both of these, but they rarely work together. 
-Deep learning models, for example, achieve high prediction accuracy but are often criticized for being "black box" models without interpretable parameters. Bayesian approaches explicitly model a data generating process and are therefore highly interpretable, but they require making lots of structural assumptions about probability distributions in real world data that might not be justified - this makes them biased and potentially less robust. Across the board, lots of high-perfoming models have a tendency to overfit training data and consequently fail to make robust predictions out in the wild. 
+Nowadays, I've shifted from machine learning applications in neuroscience to machine learning theory and methodology. I'm interested in why deep learning models work so well, along with their pitfalls. I hope that gaining a deeper foundational understanding of deep learning will help us develop models that are more performant and more interpretable (or, at least, safer and more predictable).
 
-A long-term interest of mine is developing machine learning methods that are effective tools for both *inference* and *prediction*. These methods need to be both *interpretable* and *robust* - no easy task! I hope to devote my time and attention in graduate school and beyond to studying these challenges in data science, along with applications to neuroscience and other fields. 
+<!-- Looking forward, I'm deeply interested in machine learning theory, methodology, and applications. There are really two main uses for data: inference (how/why something happened in the past) and prediction (what will happen in the future). We have good tools for both of these, but they rarely work together. 
+Deep learning models, for example, achieve high prediction accuracy but are often criticized for being "black box" models without interpretable parameters. Bayesian approaches explicitly model a data generating process and are therefore highly interpretable, but they require making lots of structural assumptions about probability distributions in real world data that might not be justified - this makes them biased and potentially less robust. Across the board, lots of high-perfoming models have a tendency to overfit training data and consequently fail to make robust predictions out in the wild.  -->
+
+<!-- A long-term interest of mine is developing machine learning methods that are effective tools for both *inference* and *prediction*. These methods need to be both *interpretable* and *robust* - no easy task! I hope to devote my time and attention in graduate school and beyond to studying these challenges in data science, along with applications to neuroscience and other fields.  -->
+
+## Theory of deep learning
+
+### Inductive bias / implicit regularization
+
+One possible explanation for why neural networks generalize well is that they have some kind of inductive bias that encourages them to learn generalizing solutions (perhaps e.g. a simplicity bias that prevents overfitting). Lots of theory has been devoted to studying how our training methods (e.g. stochastic gradient descent) implicitly regularize models' effective loss landscape such a way.
+
+The animation below illustrates how the loss landscape of a simple two-parameter model changes as you increase the strength of $$\ell_2$$ regularization. The loss landscape is a surface in 3D space, where the x-axis is the first parameter, the y-axis is the second parameter, and the z-axis is the loss. The red mesh is the loss landscape, and the blue contours show the strength of the regularization. As you increase the strength of the regularization, the aggregate loss landscape (in gray) shifts from the original minimum to a new minimum that is closer to the minimizer of the regularization term.
+
+<img src="/files/regularization-path.gif" alt="Loss landscape" width="600" align="left"/><br clear="left">
+
+The important thing to realize here is that the new optimum (solution) is not the same as the original -- it's shifted to a new point in parameter space that reflects the regularization applied. I'm interested in how we can study learned solutions like this, and how they differ from the optima of the nominal (unregularized) loss, to reverse engineer the inductive bias of the model.
 
 ## EEG analysis and machine learning applications
 
