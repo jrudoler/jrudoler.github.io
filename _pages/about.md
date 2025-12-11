@@ -18,7 +18,7 @@ news_feed_limit: 5
 
 ![This is me](/images/tetons_wall.jpg){: style="float: right; margin: 40px 0 40px 50px; width: 300px;" }
 
-I'm a graduate student at The Wharton School, pursuing a PhD in Statistics and Data Science. I am broadly interested in statistical machine learning, and am gratefully advised by Edgar Dobriban.
+I'm a graduate student at The Wharton School, pursuing a PhD in Statistics and Data Science. My interests span deep learning theory, neuroscience, and statistical aspects of each of these fields.
 
 Currently, I am working at Tel Aviv University as visiting scholar in the Blavatnik School of Computer Science and AI, hosted by [Nadav Cohen](https://www.cohennadav.com).
 

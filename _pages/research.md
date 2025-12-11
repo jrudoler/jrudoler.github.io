@@ -10,7 +10,7 @@ permalink: /research/
 > \- Benjamin Franklin 
 
 Initially, most of my research at Penn focused on analyzing electroencephalographic (EEG) recordings - measurements of the changing electrical potential in people's brains caused by neurons firing.
-A topic of particular interest for my previous lab is how we can use machine learning to actively predict a person's behavior (like whether or not they will remember a studied item) based on on their brain activity. We're still a ways off from mind-reading, but it's cool stuff. 
+A topic of particular interest for my previous lab is how we can use machine learning to actively predict a person's behavior (like whether or not they will remember a studied item) based on on their brain activity. We're still a ways off from mind-reading, but it's cool stuff.
 
 Nowadays, I've shifted from machine learning applications in neuroscience to machine learning theory and methodology. I'm interested in why deep learning models work so well, along with their pitfalls. I hope that gaining a deeper foundational understanding of deep learning will help us develop models that are more performant and more interpretable (or, at least, safer and more predictable).
 
