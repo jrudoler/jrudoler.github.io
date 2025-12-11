@@ -11,7 +11,7 @@ author_profile: true
 > \- Richard Feynman
 
 <figure style="float: right; margin-left: 20px; margin-bottom: 20px; text-align: center;">
-  <img src="/images/stat6130_lecture.png" alt="STAT6130 Lecture" style="width: 100%; max-width: 300px;">
+  <img src="/images/stat6130_lecture.jpg" alt="STAT6130 Lecture" style="width: 100%; max-width: 300px;">
 </figure>
 
 
