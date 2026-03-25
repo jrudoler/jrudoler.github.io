@@ -26,7 +26,7 @@ I was drawn to statistics and machine learning through a desire to find my place
 
 You can check out [my CV (PDF)](../files/RudolerCV.pdf).
 
-I am always excited to learn more or think about something new. Please shoot me an email or [schedule a meeting](https://fantastical.app/jhrudoler/30-min) if you'd be interested in chatting with me or maybe collaborating on a project!
+I am always excited to learn more or think about something new. Please shoot me an email if you'd be interested in chatting with me or maybe collaborating on a project!
 
 {% if page.show_news_feed %}
 {% include news-feed.html title=page.news_feed_title limit=page.news_feed_limit show_more_link=true more_url='/news/' %}
