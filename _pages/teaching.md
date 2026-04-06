@@ -30,8 +30,11 @@ The course website contains all of the lecture material and assignments and can 
 I have also served as a TA for the following courses at Wharton:
 
 - STAT6130 (Regression Analysis for Business)[MBA]
+- STAT4730 (Data Science with ChatGPT)[Undergraduate/MBA]
 - STAT4010 (Sports Analytics Captsone)[Undergraduate]
 - STAT4100 (Data Collection and Acquisition)[Undergraduate/MBA]
 - [Moneyball Academy](https://globalyouth.wharton.upenn.edu/programs-courses/moneyball-academy/) [High School]
+
+I also obtained a certification in teaching from the University's Center for Excellence in Teaching, Learning, and Innovation. 
 
 In the past I have also tutored undergraduate students for a number of Physics (my undergraduate major) and Data Science courses.
