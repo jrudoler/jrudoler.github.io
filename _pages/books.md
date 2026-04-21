@@ -12,7 +12,8 @@ author_profile: true
 A non-exhaustive list of some things I've been reading (since ~2020)...
 
 ## Fiction
-
+- _Invasion from Mars: Interplanetary Stories_ (selected by Orson Welles)
+- _Never Let Me Go_ (Kazuo Ishiguro)
 - _The Exchange_ (John Grisham)
 - _The Muralist_ (B.A. Shapiro)
 - _The Circle_ (Dave Eggers)
@@ -34,7 +35,7 @@ A non-exhaustive list of some things I've been reading (since ~2020)...
 - _Anna Karenina_ (Leo Tolstoy)
 
 ## Non-fiction
-
+- _Superintelligence_ (Nick Bostrom)
 - _The Worlds I See_ (Fei Fei Li)
 - _Surely You're Joking, Mr. Feynman_ (Richard Feynman)
 - _The Book of Why_ (Judea Pearl and Dana Mackenzie)
