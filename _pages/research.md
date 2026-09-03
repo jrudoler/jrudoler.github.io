@@ -23,6 +23,8 @@ Deep learning models, for example, achieve high prediction accuracy but are ofte
 
 ### Inductive bias / implicit regularization
 
+Paper: [Estimating Implicit Regularization in Deep Learning](https://arxiv.org/abs/2605.05436)
+
 One possible explanation for why neural networks generalize well is that they have some kind of inductive bias that encourages them to learn generalizing solutions (perhaps e.g. a simplicity bias that prevents overfitting). Lots of theory has been devoted to studying how our training methods (e.g. stochastic gradient descent) implicitly regularize models' effective loss landscape such a way.
 
 The animation below illustrates how the loss landscape of a simple two-parameter model changes as you increase the strength of $$\ell_2$$ regularization. The loss landscape is a surface in 3D space, where the x-axis is the first parameter, the y-axis is the second parameter, and the z-axis is the loss. The red mesh is the loss landscape, and the blue contours show the strength of the regularization. As you increase the strength of the regularization, the aggregate loss landscape (in gray) shifts from the original minimum to a new minimum that is closer to the minimizer of the regularization term.
