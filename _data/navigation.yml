@@ -6,7 +6,5 @@ main:
     url: /research/
   - title: "Teaching"
     url: /teaching/
-  - title: "Music"
-    url: /music/
-  - title: "Books"
-    url: /books/
+  - title: "Personal"
+    url: /personal/

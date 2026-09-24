@@ -84,8 +84,8 @@ img.author__avatar {
 }
 
 blockquote {
-  background: #f5f7fa;
-  border-left: 4px solid #d0d7de;
+  background: #1b222c;
+  border-left: 4px solid #64748b;
   border-radius: 6px;
   padding: 1rem 2rem;
   margin: 1.5rem 0;
@@ -95,10 +95,22 @@ blockquote {
   text-align: center;
   font-weight: 600;
   font-family: "Caveat", "Yellowtail", serif;
-  color: #2f363d;
+  color: #e2e8f0;
   box-sizing: border-box;
   float: none;
   clear: both;
+}
+
+blockquote.epigraph {
+  width: fit-content;
+  max-width: min(100%, 23rem);
+  padding: 0.45rem 1rem;
+  margin: 0.5rem 0 1.25rem;
+  font-size: 0.98rem;
+  line-height: 1.35;
+  text-align: left;
+  font-weight: 500;
+  border-left-width: 3px;
 }
 
 blockquote p {
@@ -121,3 +133,131 @@ blockquote p {
   font-style: normal;
 }
 
+/* Dark palette refinements for the Minimal Mistakes dark skin. */
+body,
+.page,
+.archive,
+.page__content,
+.sidebar,
+.author__content,
+.author__urls-wrapper,
+.page__footer {
+  color: #e3e8ef;
+}
+
+body {
+  background: #11151b;
+}
+
+.masthead,
+.masthead__inner-wrap,
+.greedy-nav,
+.page__footer,
+.page__footer-follow,
+.page__footer-copyright {
+  background: #171d25;
+}
+
+.page__content,
+.archive__item,
+.author__urls,
+.news-feed__table {
+  background-color: transparent;
+}
+
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.archive__item-title,
+.author__name {
+  color: #f1f5f9;
+}
+
+a,
+a:visited,
+.pagination--pager,
+.greedy-nav a {
+  color: #91c8ff;
+}
+
+a:hover,
+.greedy-nav a:hover {
+  color: #c3e2ff;
+}
+
+.page__content hr,
+.page__footer,
+.author__urls,
+.news-feed__table tr {
+  border-color: #36404d;
+}
+
+.news-feed__date {
+  color: #aab6c5;
+}
+
+.news-feed__summary {
+  color: #cbd5e1;
+}
+
+.teaching-course-preview,
+.teaching-classroom-photo,
+.research-figure {
+  margin: 1.5rem 0 2rem;
+  text-align: center;
+}
+
+.about-photo {
+  float: right;
+  width: min(42%, 19rem);
+  margin: 0.5rem 0 1.25rem 2rem;
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.teaching-course-preview img,
+.teaching-classroom-photo img,
+.research-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.teaching-course-preview img {
+  max-width: 42rem;
+}
+
+.teaching-classroom-photo img {
+  max-width: 34rem;
+}
+
+.research-figure img {
+  max-width: 42rem;
+}
+
+figcaption {
+  margin-top: 0.4rem;
+  color: #aab6c5;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 40em) {
+  .about-photo {
+    float: none;
+    width: min(100%, 22rem);
+    margin: 0 auto 1.25rem;
+  }
+
+  blockquote.epigraph {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+  }
+}

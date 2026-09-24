@@ -9,32 +9,44 @@ author_profile: true
 
 > "If you want to master something, teach it." \
 > \- Richard Feynman
+{: .epigraph}
 
-<figure style="float: right; margin-left: 20px; margin-bottom: 20px; text-align: center;">
-  <img src="/images/stat6130_lecture.jpg" alt="STAT6130 Lecture" style="width: 100%; max-width: 300px;">
+I owe a lot to the wonderful teachers and mentors I've had over the years—not just in math. One of my English professors helped convince me to do a PhD!
+
+I really appreciate the chance to share ideas with students. Teaching is rewarding, and I usually come away understanding the material a little better myself.
+
+## Course design: Understanding Uncertainty
+
+I recently designed and taught *Understanding Uncertainty*, an introductory statistics and data science course. Instead of starting with a lot of formal machinery, it leans on sampling and programmatic simulation to help build intuition.
+
+The course site includes [lecture materials and assignments](https://jrudoler-teaching.github.io/understanding-uncertainty/).
+
+<figure class="teaching-course-preview">
+  <a href="https://jrudoler-teaching.github.io/understanding-uncertainty/">
+    <img src="/images/uncertainty-course-screenshot.png" alt="Preview of the Understanding Uncertainty course website">
+  </a>
+  <figcaption>Understanding Uncertainty course website</figcaption>
 </figure>
 
+## Classroom teaching
 
-I owe a lot to the wonderful teachers and mentors I've had over the years (not just in mathematics -- it was one of my English professors who convinced me to do a PhD!)
+I have taught and supported courses across regression, data science, sports analytics, and data collection. A classroom photo from STAT6130:
 
-I appreciate the opportunity I have now to try and share some insight with students. I find the process rewarding and illuminating.
+<figure class="teaching-classroom-photo">
+  <img src="/images/stat6130_lecture.jpg" alt="Students attending a STAT6130 lecture">
+  <figcaption>STAT6130 lecture</figcaption>
+</figure>
 
-I recently authored and taught a new course for introductory statistics and data science. Titled "Understanding Uncertainty", the course avoids much of the standard statistical machinary in favor of an approach that focuses heavily on sampling and programmatic simulation.
+## Teaching at Wharton
 
-The course website contains all of the lecture material and assignments and can be found [here](https://jrudoler-teaching.github.io/understanding-uncertainty/).
+I have served as a teaching assistant for:
 
-<a href="https://jrudoler-teaching.github.io/understanding-uncertainty/">
-  <img src="/images/uncertainty-course-screenshot.png" alt="Understanding Uncertainty Course" style="width: 100%; max-width: 600px;">
-</a>
-
-I have also served as a TA for the following courses at Wharton:
-
-- STAT6130 (Regression Analysis for Business)[MBA]
-- STAT4730 (Data Science with ChatGPT)[Undergraduate/MBA]
-- STAT4010 (Sports Analytics Captsone)[Undergraduate]
-- STAT4100 (Data Collection and Acquisition)[Undergraduate/MBA]
+- STAT6130: Regression Analysis for Business (MBA)
+- STAT4730: Data Science with ChatGPT (Undergraduate/MBA)
+- STAT4010: Sports Analytics Capstone (Undergraduate)
+- STAT4100: Data Collection and Acquisition (Undergraduate/MBA)
 - [Moneyball Academy](https://globalyouth.wharton.upenn.edu/programs-courses/moneyball-academy/) [High School]
 
-I also obtained a certification in teaching from the University's Center for Excellence in Teaching, Learning, and Innovation. 
+I also hold a teaching certification from the University's Center for Excellence in Teaching, Learning, and Innovation.
 
-In the past I have also tutored undergraduate students for a number of Physics (my undergraduate major) and Data Science courses.
+Earlier, I tutored undergraduates in physics and data science.

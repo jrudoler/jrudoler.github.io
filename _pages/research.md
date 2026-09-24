@@ -8,11 +8,11 @@ permalink: /research/
 ---
 > "Little strokes fell great oaks." \
 > \- Benjamin Franklin 
+{: .epigraph}
 
-Initially, most of my research at Penn focused on analyzing electroencephalographic (EEG) recordings - measurements of the changing electrical potential in people's brains caused by neurons firing.
-A topic of particular interest for my previous lab is how we can use machine learning to actively predict a person's behavior (like whether or not they will remember a studied item) based on on their brain activity. We're still a ways off from mind-reading, but it's cool stuff.
+My research has wandered from machine learning applications in neuroscience toward the theory and methodology of deep learning. Across both areas, I'm interested in how learning systems pick up useful patterns, and when those patterns carry over to new people, data, or tasks.
 
-Nowadays, I've shifted from machine learning applications in neuroscience to machine learning theory and methodology. I'm interested in why deep learning models work so well, along with their pitfalls. I hope that gaining a deeper foundational understanding of deep learning will help us develop models that are more performant and more interpretable (or, at least, safer and more predictable).
+At Penn, I worked with electroencephalography (EEG)—electrical recordings of brain activity—and used machine learning to ask whether brain signals could help predict behavior, like whether someone would remember an item. We're still a ways off from mind-reading, but it's pretty cool stuff. These days I'm interested in why deep learning works so well, where it runs into trouble, and whether a better theoretical understanding can help us build models that are more reliable and interpretable.
 
 <!-- Looking forward, I'm deeply interested in machine learning theory, methodology, and applications. There are really two main uses for data: inference (how/why something happened in the past) and prediction (what will happen in the future). We have good tools for both of these, but they rarely work together. 
 Deep learning models, for example, achieve high prediction accuracy but are often criticized for being "black box" models without interpretable parameters. Bayesian approaches explicitly model a data generating process and are therefore highly interpretable, but they require making lots of structural assumptions about probability distributions in real world data that might not be justified - this makes them biased and potentially less robust. Across the board, lots of high-perfoming models have a tendency to overfit training data and consequently fail to make robust predictions out in the wild.  -->
@@ -21,26 +21,29 @@ Deep learning models, for example, achieve high prediction accuracy but are ofte
 
 ## Theory of deep learning
 
+Right now I'm especially interested in how training procedures shape the solutions neural networks learn, and what those solutions can tell us about generalization.
+
 ### Inductive bias / implicit regularization
 
 Paper: [Estimating Implicit Regularization in Deep Learning](https://arxiv.org/abs/2605.05436)
 
 One possible explanation for why neural networks generalize well is that they have some kind of inductive bias that encourages them to learn generalizing solutions (perhaps e.g. a simplicity bias that prevents overfitting). Lots of theory has been devoted to studying how our training methods (e.g. stochastic gradient descent) implicitly regularize models' effective loss landscape such a way.
 
-The animation below illustrates how the loss landscape of a simple two-parameter model changes as you increase the strength of $$\ell_2$$ regularization. The loss landscape is a surface in 3D space, where the x-axis is the first parameter, the y-axis is the second parameter, and the z-axis is the loss. The red mesh is the loss landscape, and the blue contours show the strength of the regularization. As you increase the strength of the regularization, the aggregate loss landscape (in gray) shifts from the original minimum to a new minimum that is closer to the minimizer of the regularization term.
+The animation shows what happens to a simple two-parameter model as we turn up $$\ell_2$$ regularization. The red surface is the original loss, the blue contours show the regularizer, and the gray surface is the combined objective. As the regularization gets stronger, the minimum moves toward the point preferred by the regularizer.
 
-<img src="/files/regularization-path.gif" alt="Loss landscape" width="600" align="left"/><br clear="left">
+<figure class="research-figure">
+  <img src="/files/regularization-path.gif" alt="Animation showing how regularization shifts the minimum of a two-parameter loss landscape">
+  <figcaption>As regularization increases, the minimum of the combined objective shifts.</figcaption>
+</figure>
 
-The important thing to realize here is that the new optimum (solution) is not the same as the original -- it's shifted to a new point in parameter space that reflects the regularization applied. I'm interested in how we can study learned solutions like this, and how they differ from the optima of the nominal (unregularized) loss, to reverse engineer the inductive bias of the model.
+The new solution isn't the same as the original one: regularization nudges it to a different point in parameter space. I'm interested in using shifts like this to reverse-engineer the inductive biases that training introduces.
 
 ## EEG analysis and machine learning applications
 
 ### Working towards foundation models for neural data
-My master's thesis was about training deep neural nets to predict behavior (in particular, memory) from neural data aggregated across different people. 
-This is an instance of a type of transfer learning called domain adaptation -- 
-essentially you want the model to learn some shared properties of neural activity across brains so that it can predict neural activity in a brain that it's never seen before. This is similar in spirit to how large language models are trained on large corpora of text so they can learn properties of natural language that generalize to new language-related tasks.
+For my master's thesis, I trained deep neural networks to predict behavior (especially memory) from neural data collected across different people. This is a kind of transfer learning called domain adaptation: the hope is that a model can pick up patterns shared across brains and use them to make predictions for someone it hasn't seen before.
 
-While my work was recognized by an award from my department, we didn't really have any publishable results. Since then, similar work has come out showing that this kind of approach is successful for many tasks with stronger neural correlates than memory (e.g. motor tasks, sleep stages, stress/emotion, etc.). I'm not actively working on this but think it's a super cool and promising research direction.  
+The work received a departmental award, though we didn't end up with a paper. Since then, similar approaches have shown promise for tasks with clearer neural signals than memory, like motor activity, sleep stages, and stress. I'm not working on this now, but I still think it's a really promising direction.
 
 ### Decoding brain states and improving memory
 Paper: [Decoding EEG for optimizing naturalistic memory](https://www.sciencedirect.com/science/article/abs/pii/S0165027024001651), *Journal of Neuroscience Methods*
@@ -54,16 +57,19 @@ Paper: [Hippocampal theta and episodic memory](https://www.jneurosci.org/content
 - I investigate how a method of distinguishing pink noise in brain recordings from true brain rhythms helps us understand what patterns of brain activity actually relate to successful memory encoding and retrieval. Presented at the *Context and Episodic Memory Symposium* in August 2021 and *Computational and Systems Neuroscience (COSYNE)* in March 2022.
 <!-- -->
 
-<img src="/files/exp_animation.gif" alt="Changing Parameters" width="600" align="left"/><br clear="left">
+<figure class="research-figure">
+  <img src="/files/exp_animation.gif" alt="Animation illustrating changes in model parameters">
+</figure>
 
 ### EEG pre-processing methods
-Undergraduate Research Project: [Optimal EEG Referencing Schemes for Brain State Classification](./files/Referencing_Report.pdf)
-- Analyzing changing electrical potential requires choosing a reference point for the measurement. When we have some set of electrodes recording brain activity in distinct spatial locations in the brain, should they all be referenced the same way? To a common electrode? To their nearest neighboring electrode? To a weighted sum of other electrodes? I discuss a number of approaches, explain how they act as variable "spatial filters", and compare their utility for classifying brain state and memory success.
+Undergraduate research project: [Optimal EEG Referencing Schemes for Brain State Classification](/files/Referencing_Report.pdf). The project compares reference schemes for EEG electrodes, explains how they act as spatial filters, and evaluates their utility for classifying brain state and memory success.
 
-## Sports Analytics
+## Sports analytics
 
-In my free time I like to dabble in sports analytics a bit. I (along with a few other Penn grad students) was named a finalist for the 2022 NFL Big Data Bowl! 
+In my spare time, I like to dabble in sports analytics. In 2022, my team of Penn grad students was named a finalist for the NFL Big Data Bowl!
 You can check out our [Kaggle notebook](https://www.kaggle.com/jrudoler56/optimal-run-path-for-kick-returners) as well as the NFL's [press release](https://operations.nfl.com/updates/football-ops/nfl-announces-finalists-for-fourth-annual-nfl-big-data-bowl/) announcing the finalists and my team's [video presentation](https://www.nfl.com/videos/2022-big-data-bowl-ryan-gross-joseph-rudoler-tai-nguyen-ryan-brill) of our project.
 
-Our submission showed how high resolution player-tracking data allows us to train a model that predicts the outcome of a kick return, and we develop a framework for using this to compute *optimal return paths* and evaluate player decision-making.
-<img src="/files/bdb.gif" alt="Big Data Bowl" width="600" align="left"/><br clear="left">
+Our project used high-resolution player-tracking data to predict kick-return outcomes, then built a framework for finding *optimal return paths* and evaluating players' decisions.
+<figure class="research-figure">
+  <img src="/files/bdb.gif" alt="Animation from the Big Data Bowl kick-return analysis">
+</figure>
