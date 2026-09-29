@@ -186,6 +186,12 @@ a:hover,
   color: #c3e2ff;
 }
 
+/* Keep every linked sidebar icon aligned with its link color. */
+.author__urls.social-icons a i,
+.author__urls.social-icons a .svg-inline--fa {
+  color: inherit;
+}
+
 .page__content hr,
 .page__footer,
 .author__urls,
