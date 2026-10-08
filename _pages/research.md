@@ -12,6 +12,8 @@ permalink: /research/
 
 My research has wandered from machine learning applications in neuroscience toward the theory and methodology of deep learning. Across both areas, I'm interested in how learning systems pick up useful patterns, and when those patterns carry over to new people, data, or tasks.
 
+See my [publication list](/publications/) for papers, preprints, presentations, and datasets, with filters by topic and type.
+
 At Penn, I worked with electroencephalography (EEG)—electrical recordings of brain activity—and used machine learning to ask whether brain signals could help predict behavior, like whether someone would remember an item. We're still a ways off from mind-reading, but it's pretty cool stuff. These days I'm interested in why deep learning works so well, where it runs into trouble, and whether a better theoretical understanding can help us build models that are more reliable and interpretable.
 
 <!-- Looking forward, I'm deeply interested in machine learning theory, methodology, and applications. There are really two main uses for data: inference (how/why something happened in the past) and prediction (what will happen in the future). We have good tools for both of these, but they rarely work together. 

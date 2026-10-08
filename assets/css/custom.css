@@ -267,3 +267,73 @@ figcaption {
     padding: 0.5rem 0.8rem;
   }
 }
+
+/* Publication list: a compact, progressively enhanced bibliography. */
+.publications [hidden] { display: none !important; }
+.publication-controls { margin: 1.8rem 0 1rem; }
+.publication-views, .publication-topics, .publication-labels, .publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.publication-views { margin-bottom: 1rem; }
+.publications button {
+  border: 1px solid #526174;
+  border-radius: 5px;
+  padding: 0.35rem 0.7rem;
+  background: transparent;
+  color: #d9e4ef;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.publications button[aria-pressed="true"] {
+  background: #91c8ff;
+  color: #11151b;
+  border-color: #91c8ff;
+}
+.publications button:focus-visible, .publications summary:focus-visible {
+  outline: 2px solid #c3e2ff;
+  outline-offset: 3px;
+}
+.publication-topics { font-size: 0.85rem; margin-bottom: 1rem; }
+.publication-fields { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.publication-fields label { font-size: 0.8rem; flex: 1 1 9rem; }
+.publication-fields select {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.55rem;
+  border: 1px solid #526174;
+  border-radius: 5px;
+  background: #171d25;
+  color: #e3e8ef;
+  font: inherit;
+  font-size: 0.9rem;
+}
+.publication-credit { font-size: 0.8rem; color: #aab6c5; }
+.publication { padding: 1.3rem 0; border-top: 1px solid #36404d; }
+.publication-labels { font-size: 0.75rem; color: #aab6c5; }
+.publication-year { color: #e3e8ef; font-weight: 700; }
+.publication-tag, .publication-status {
+  background: #202c3b;
+  border-radius: 4px;
+  padding: 0.15rem 0.45rem;
+}
+.publication-status { color: #b4ddc8; background: #19352b; }
+.publication .publication-title { margin: 0.45rem 0; font-size: 1.12rem; line-height: 1.4; }
+.publication-title a { text-decoration: none; }
+.publication-title a:hover { text-decoration: underline; }
+.publication-authors, .publication-collaborators, .publication-venue {
+  font-size: 0.88rem;
+  margin: 0.25rem 0;
+  line-height: 1.55;
+}
+.publication-collaborators { color: #aab6c5; }
+.publication-venue { font-style: italic; color: #cbd5e1; }
+.publication-links { gap: 0.8rem; margin-top: 0.5rem; font-size: 0.8rem; }
+.publication-citation { position: relative; }
+.publication-citation summary { color: #91c8ff; cursor: pointer; }
+.publication-citation[open] { flex-basis: 100%; }
+.publication-citation pre { max-height: 22rem; overflow: auto; font-size: 0.72rem; padding: 1rem; background: #171d25; }
+.publication-credit { margin-top: 2rem; }

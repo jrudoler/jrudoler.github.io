@@ -1,35 +1,72 @@
 ---
 layout: archive
-title: "Publications"
+classes: wide
+title: Publications
 permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-<div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar
-    profile</a>.</div>
-{% endif %}
+<p>Papers, preprints, presentations, and datasets. For the story behind the work,
+  see <a href="{{ '/research/' | relative_url }}">my research</a>.
+  You can also find me on <a href="{{ site.author.googlescholar | escape }}">Google Scholar</a>.</p>
 
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-{% for category in site.publication_category %}
-{% assign title_shown = false %}
-{% for post in site.publications reversed %}
-{% if post.category != category[0] %}
-{% continue %}
-{% endif %}
-{% unless title_shown %}
-<h2>{{ category[1].title }}</h2>
-<hr />
-{% assign title_shown = true %}
-{% endunless %}
-{% include archive-single.html %}
-{% endfor %}
-{% endfor %}
-{% else %}
-{% for post in site.publications reversed %}
-{% include archive-single.html %}
-{% endfor %}
-{% endif %}
+<section class="publications" aria-label="Publication list">
+  <div class="publication-controls" hidden>
+    <div class="publication-views" role="group" aria-label="Publication selection">
+      <button type="button" data-view="all" aria-pressed="true">All</button>
+      <button type="button" data-view="selected" aria-pressed="false">Selected</button>
+    </div>
+    <div class="publication-topics" role="group" aria-label="Filter by topic">
+      <span>Topics</span>
+      <button type="button" data-topic="" aria-pressed="true">All topics</button>
+      {% assign topics = '' | split: ',' %}
+      {% for paper in site.data.publications %}
+        {% assign details = site.data.publication_details[paper.key] %}
+        {% if details.topics %}{% assign topics = topics | concat: details.topics %}{% endif %}
+      {% endfor %}
+      {% assign topics = topics | uniq | sort %}
+      {% for topic in topics %}
+      <button type="button" data-topic="{{ topic | escape }}" aria-pressed="false">{{ topic | escape }}</button>
+      {% endfor %}
+    </div>
+    <div class="publication-fields">
+      <label>Type <select id="publication-type">
+        <option value="">All types</option>
+        <option>Paper</option><option>Preprint</option><option>Presentation</option><option>Dataset</option>
+      </select></label>
+      <label>Sort <select id="publication-sort">
+        <option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="title">Title A–Z</option>
+      </select></label>
+    </div>
+  </div>
+  <div class="publication-list">
+  {% for paper in site.data.publications %}
+    {% assign details = site.data.publication_details[paper.key] %}
+    <article class="publication" id="{{ paper.key | escape }}"
+      data-selected="{% if details.selected %}true{% else %}false{% endif %}"
+      data-topics="{{ details.topics | jsonify | escape }}" data-type="{{ paper.type | escape }}"
+      data-date="{{ paper.date | escape }}" data-title="{{ paper.title | escape }}">
+      <div class="publication-labels">
+        <span class="publication-year">{{ paper.year }}</span>
+        <span>{{ paper.type | escape }}</span>
+        {% if paper.status != '' and paper.status != paper.type %}<span class="publication-status">{{ paper.status | escape }}</span>{% endif %}
+        {% for topic in details.topics %}<span class="publication-tag">{{ topic | escape }}</span>{% endfor %}
+      </div>
+      <h2 class="publication-title">{% if paper.url != '' %}<a href="{{ paper.url | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}</h2>
+      <p class="publication-authors">{% for author in paper.authors %}{% if author contains 'Rudoler' %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+      {% if paper.collaborators.size > 0 %}<p class="publication-collaborators">With {{ paper.collaborators | join: ', ' | escape }}</p>{% endif %}
+      {% if paper.venue != '' %}<p class="publication-venue">{{ paper.venue | escape }}</p>{% endif %}
+      {% if details.summary %}<p>{{ details.summary | escape }}</p>{% endif %}
+      <div class="publication-links">
+        {% if paper.url != '' %}<a href="{{ paper.url | escape }}">{% if paper.type == 'Dataset' %}Data{% else %}Paper{% endif %}</a>{% endif %}
+        {% if paper.preprint != '' %}<a href="{{ paper.preprint | escape }}">Preprint</a>{% endif %}
+        {% for link in details.links %}<a href="{{ link.url | relative_url | escape }}">{{ link.label | escape }}</a>{% endfor %}
+        <details class="publication-citation"><summary>Cite</summary><pre><code>{{ paper.bibtex | escape }}</code></pre></details>
+      </div>
+    </article>
+  {% endfor %}
+  </div>
+  <p class="publication-empty" hidden>No publications match these filters. <button type="button" id="publication-reset">Clear filters</button></p>
+</section>
+<p class="publication-credit">Publication layout inspired by <a href="https://github.com/msaveski/www_personal">Martin Saveski’s template</a>.</p>
+<script src="{{ '/assets/js/publications.js' | relative_url }}" defer></script>
