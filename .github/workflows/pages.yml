@@ -23,16 +23,35 @@ jobs:
           persist-credentials: false
       - name: Configure Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
-      - name: Build the website
-        uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1
       - name: Fetch the latest generated CV
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           ref: cv-artifacts
           path: _generated-cv
           persist-credentials: false
-          sparse-checkout: RudolerCV.pdf
+          sparse-checkout: |
+            RudolerCV.pdf
+            publications.json
           sparse-checkout-cone-mode: false
+      - name: Load the publication data paired with the CV
+        run: |
+          set -euo pipefail
+          if [ -f _generated-cv/publications.json ]; then
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('_generated-cv/publications.json').read_text())
+          assert isinstance(data, list) and data, 'Empty publication export'
+          assert len({p['key'] for p in data}) == len(data), 'Duplicate publication keys'
+          assert all(p['title'] and p['authors'] for p in data), 'Invalid publication export'
+          PY
+            cp _generated-cv/publications.json _data/publications.json
+          else
+            # Bootstrap until the first run of the updated CV publisher.
+            echo 'Using the checked-in publication snapshot; CV publisher has not exported JSON yet.'
+          fi
+      - name: Build the website
+        uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1
       - name: Install the generated PDF at the existing CV URL
         run: |
           set -euo pipefail

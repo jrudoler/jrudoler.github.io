@@ -1,0 +1,301 @@
+[
+  {
+    "key": "rudolerImprovingScalableOversight2026",
+    "title": "Improving Scalable Oversight with Co-Trained Monitors",
+    "authors": [
+      "Joseph H. Rudoler",
+      "Kevin Tan",
+      "Benedict Tessler",
+      "Timothy Kong",
+      "Enric Boix Adserà"
+    ],
+    "collaborators": [],
+    "date": "2026-09-28",
+    "year": 2026,
+    "type": "Preprint",
+    "status": "Preprint",
+    "venue": "",
+    "url": "https://arxiv.org/abs/2609.36049",
+    "preprint": "",
+    "bibtex": "@online{rudolerImprovingScalableOversight2026,\n author = {Rudoler, Joseph H. and Tan, Kevin and Tessler, Benedict and Kong, Timothy and Boix Adserà, Enric},\n date = {2026-09-28},\n doi = {10.48550/arXiv.2609.36049},\n eprint = {2609.36049},\n eprinttype = {arXiv},\n pubstate = {prepublished},\n title = {Improving Scalable Oversight with Co-Trained Monitors},\n url = {https://arxiv.org/abs/2609.36049}\n}"
+  },
+  {
+    "key": "rudolerEstimatingImplicitRegularization2026",
+    "title": "Estimating Implicit Regularization in Deep Learning",
+    "authors": [
+      "Joseph H. Rudoler",
+      "Kevin Tan",
+      "Giles Hooker",
+      "Konrad P. Kording"
+    ],
+    "collaborators": [],
+    "date": "2026-05-06",
+    "year": 2026,
+    "type": "Paper",
+    "status": "Accepted",
+    "venue": "NeurIPS 2026",
+    "url": "https://arxiv.org/abs/2605.05436",
+    "preprint": "",
+    "bibtex": "@inproceedings{rudolerEstimatingImplicitRegularization2026,\n author = {Rudoler, Joseph H. and Tan, Kevin and Hooker, Giles and Kording, Konrad P.},\n booktitle = {{{NeurIPS}} 2026},\n date = {2026-05-06},\n doi = {10.48550/arXiv.2605.05436},\n eprint = {2605.05436},\n eprinttype = {arXiv},\n publisher = {arXiv},\n pubstate = {inpress},\n title = {Estimating {{Implicit Regularization}} in {{Deep Learning}}},\n url = {https://arxiv.org/abs/2605.05436}\n}"
+  },
+  {
+    "key": "rudolerWeightSpaceGradient2026",
+    "title": "Weight Space Gradient Descent Induces Approximate Activity Descent, Making Learning Rules Testable",
+    "authors": [
+      "Joseph H. Rudoler",
+      "Andrew M. Saxe",
+      "Konrad Kording"
+    ],
+    "collaborators": [],
+    "date": "2026",
+    "year": 2026,
+    "type": "Paper",
+    "status": "Accepted",
+    "venue": "NeurIPS 2026 Workshop on Symmetry and Geometry in Neural Representations (NeurReps), Extended Abstract Track",
+    "url": "",
+    "preprint": "",
+    "bibtex": "@inproceedings{rudolerWeightSpaceGradient2026,\n author = {Rudoler, Joseph H. and Saxe, Andrew M. and Kording, Konrad},\n booktitle = {{{NeurIPS}} 2026 {{Workshop}} on {{Symmetry}} and {{Geometry}} in {{Neural Representations}} ({{NeurReps}}), {{Extended Abstract Track}}},\n date = {2026},\n pubstate = {inpress},\n title = {Weight Space Gradient Descent Induces Approximate Activity Descent, Making Learning Rules Testable}\n}"
+  },
+  {
+    "key": "rudolerWeDecodeBetter2025",
+    "title": "Do We Decode Better than Chance? Efficient Hypothesis Testing for Neural Decoders",
+    "authors": [
+      "Joseph H. Rudoler"
+    ],
+    "collaborators": [
+      "Riley DeHaan",
+      "Konrad P. Kording",
+      "Edgar Dobriban"
+    ],
+    "date": "2025",
+    "year": 2025,
+    "type": "Presentation",
+    "status": "",
+    "venue": "Cognitive Computational Neuroscience",
+    "url": "",
+    "preprint": "",
+    "bibtex": "@poster{rudolerWeDecodeBetter2025,\n author = {Rudoler, Joseph H.},\n date = {2025},\n eventtitle = {Cognitive {{Computational Neuroscience}}},\n namea = {DeHaan, Riley and Kording, Konrad P. and Dobriban, Edgar},\n nameatype = {collaborator},\n title = {Do We Decode Better than Chance? {{Efficient}} Hypothesis Testing for Neural Decoders},\n type = {Poster}\n}"
+  },
+  {
+    "key": "rudolerDecodingEEGOptimizing2024",
+    "title": "Decoding EEG for Optimizing Naturalistic Memory",
+    "authors": [
+      "Joseph H. Rudoler",
+      "James P. Bruska",
+      "Woohyeuk Chang",
+      "Matthew R. Dougherty",
+      "Brandon S. Katerman",
+      "David J. Halpern",
+      "Nicholas B. Diamond",
+      "Michael J. Kahana"
+    ],
+    "collaborators": [],
+    "date": "2024-10-01",
+    "year": 2024,
+    "type": "Paper",
+    "status": "",
+    "venue": "Journal of Neuroscience Methods",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0165027024001651",
+    "preprint": "",
+    "bibtex": "@article{rudolerDecodingEEGOptimizing2024,\n author = {Rudoler, Joseph H. and Bruska, James P. and Chang, Woohyeuk and Dougherty, Matthew R. and Katerman, Brandon S. and Halpern, David J. and Diamond, Nicholas B. and Kahana, Michael J.},\n date = {2024-10-01},\n doi = {10.1016/j.jneumeth.2024.110220},\n journaltitle = {Journal of Neuroscience Methods},\n pages = {110220},\n title = {Decoding {{EEG}} for Optimizing Naturalistic Memory},\n url = {https://www.sciencedirect.com/science/article/pii/S0165027024001651},\n volume = {410}\n}"
+  },
+  {
+    "key": "kahanaPennElectrophysiologyEncoding2024",
+    "title": "The Penn Electrophysiology of Encoding and Retrieval Study.",
+    "authors": [
+      "Michael J. Kahana",
+      "Lynn J. Lohnas",
+      "M. Karl Healey",
+      "Ada Aka",
+      "Adam W. Broitman",
+      "Patrick Crutchley",
+      "Elizabeth Crutchley",
+      "Kylie H. Alm",
+      "Brandon S. Katerman",
+      "Nicole E. Miller",
+      "Joel R. Kuhn",
+      "Yuxuan Li",
+      "Nicole M. Long",
+      "Jonathan Miller",
+      "Madison D. Paron",
+      "Jesse K. Pazdera",
+      "Isaac Pedisich",
+      "Joseph H. Rudoler",
+      "Christoph T. Weidemann"
+    ],
+    "collaborators": [],
+    "date": "2024",
+    "year": 2024,
+    "type": "Paper",
+    "status": "",
+    "venue": "Journal of Experimental Psychology: Learning, Memory, and Cognition",
+    "url": "https://doi.org/10.1037/xlm0001319",
+    "preprint": "",
+    "bibtex": "@article{kahanaPennElectrophysiologyEncoding2024,\n author = {Kahana, Michael J. and Lohnas, Lynn J. and Healey, M. Karl and Aka, Ada and Broitman, Adam W. and Crutchley, Patrick and Crutchley, Elizabeth and Alm, Kylie H. and Katerman, Brandon S. and Miller, Nicole E. and Kuhn, Joel R. and Li, Yuxuan and Long, Nicole M. and Miller, Jonathan and Paron, Madison D. and Pazdera, Jesse K. and Pedisich, Isaac and Rudoler, Joseph H. and Weidemann, Christoph T.},\n date = {2024},\n doi = {10.1037/xlm0001319},\n journaltitle = {Journal of Experimental Psychology: Learning, Memory, and Cognition},\n publisher = {American Psychological Association},\n title = {The {{Penn Electrophysiology}} of {{Encoding}} and {{Retrieval Study}}.},\n url = {https://doi.org/10.1037/xlm0001319}\n}"
+  },
+  {
+    "key": "doughertyNeuralCorrelatesMemory2024",
+    "title": "Neural Correlates of Memory in an Immersive Spatiotemporal Context",
+    "authors": [
+      "Matthew R. Dougherty",
+      "Woohyeuk Chang",
+      "Joseph H. Rudoler",
+      "Brandon S. Katerman",
+      "David J. Halpern",
+      "James P. Bruska",
+      "Nicholas B. Diamond",
+      "Michael J. Kahana"
+    ],
+    "collaborators": [],
+    "date": "2024",
+    "year": 2024,
+    "type": "Paper",
+    "status": "",
+    "venue": "Journal of Experimental Psychology: Learning, Memory, and Cognition",
+    "url": "https://doi.org/10.1037/xlm0001341",
+    "preprint": "",
+    "bibtex": "@article{doughertyNeuralCorrelatesMemory2024,\n author = {Dougherty, Matthew R. and Chang, Woohyeuk and Rudoler, Joseph H. and Katerman, Brandon S. and Halpern, David J. and Bruska, James P. and Diamond, Nicholas B. and Kahana, Michael J.},\n date = {2024},\n doi = {10.1037/xlm0001341},\n journaltitle = {Journal of Experimental Psychology: Learning, Memory, and Cognition},\n title = {Neural Correlates of Memory in an Immersive Spatiotemporal Context},\n url = {https://doi.org/10.1037/xlm0001341}\n}"
+  },
+  {
+    "key": "rudolerHippocampalThetaEpisodic2023",
+    "title": "Hippocampal Theta and Episodic Memory",
+    "authors": [
+      "Joseph H. Rudoler",
+      "Nora A. Herweg",
+      "Michael J. Kahana"
+    ],
+    "collaborators": [],
+    "date": "2023-01-25",
+    "year": 2023,
+    "type": "Paper",
+    "status": "",
+    "venue": "Journal of Neuroscience",
+    "url": "https://doi.org/10.1523/JNEUROSCI.1045-22.2022",
+    "preprint": "",
+    "bibtex": "@article{rudolerHippocampalThetaEpisodic2023,\n author = {Rudoler, Joseph H. and Herweg, Nora A. and Kahana, Michael J.},\n date = {2023-01-25},\n doi = {10.1523/JNEUROSCI.1045-22.2022},\n eprint = {36639900},\n eprinttype = {pubmed},\n journaltitle = {Journal of Neuroscience},\n number = {4},\n pages = {613--620},\n publisher = {Society for Neuroscience},\n title = {Hippocampal {{Theta}} and {{Episodic Memory}}},\n url = {https://doi.org/10.1523/JNEUROSCI.1045-22.2022},\n volume = {43}\n}"
+  },
+  {
+    "key": "rudolerSpatialMemoryNoninvasive2023",
+    "title": "\"Spatial Memory and Non-Invasive Closed-Loop Stimulus Timing\"",
+    "authors": [
+      "Joseph H. Rudoler",
+      "Matthew R. Dougherty",
+      "Brandon S. Katerman",
+      "James P. Bruska",
+      "Woohyeuk Chang",
+      "David J. Halpern",
+      "Nicholas B. Diamond",
+      "Michael J. Kahana"
+    ],
+    "collaborators": [],
+    "date": "2023",
+    "year": 2023,
+    "type": "Dataset",
+    "status": "",
+    "venue": "OpenNeuro",
+    "url": "https://doi.org/10.18112/openneuro.ds004706.v1.0.0",
+    "preprint": "",
+    "bibtex": "@dataset{rudolerSpatialMemoryNoninvasive2023,\n author = {Rudoler, Joseph H. and Dougherty, Matthew R. and Katerman, Brandon S. and Bruska, James P. and Chang, Woohyeuk and Halpern, David J. and Diamond, Nicholas B. and Kahana, Michael J.},\n date = {2023},\n doi = {10.18112/openneuro.ds004706.v1.0.0},\n publisher = {OpenNeuro},\n title = {\"{{Spatial}} Memory and Non-Invasive Closed-Loop Stimulus Timing\"},\n url = {https://doi.org/10.18112/openneuro.ds004706.v1.0.0}\n}"
+  },
+  {
+    "key": "kahanaPennElectrophysiologyEncoding2023",
+    "title": "Penn Electrophysiology of Encoding and Retrieval Study (PEERS)",
+    "authors": [
+      "Michael J. Kahana",
+      "Joseph H. Rudoler",
+      "Lynn J. Lohnas",
+      "Karl Healey",
+      "Ada Aka",
+      "Adam Broitman",
+      "Elizabeth Crutchley",
+      "Patrick Crutchley",
+      "Kylie H. Alm",
+      "Brandon S. Katerman",
+      "Nicole E. Miller",
+      "Joel R. Kuhn",
+      "Yuxuan Li",
+      "Nicole M. Long",
+      "Jonathan Miller",
+      "Madison D. Paron",
+      "Jesse K. Pazdera",
+      "Isaac Pedisich",
+      "Christoph T. Weidemann"
+    ],
+    "collaborators": [],
+    "date": "2023",
+    "year": 2023,
+    "type": "Dataset",
+    "status": "",
+    "venue": "OpenNeuro",
+    "url": "https://doi.org/10.18112/openneuro.ds004395.v2.0.0",
+    "preprint": "",
+    "bibtex": "@dataset{kahanaPennElectrophysiologyEncoding2023,\n author = {Kahana, Michael J. and Rudoler, Joseph H. and Lohnas, Lynn J. and Healey, Karl and Aka, Ada and Broitman, Adam and Crutchley, Elizabeth and Crutchley, Patrick and Alm, Kylie H. and Katerman, Brandon S. and Miller, Nicole E. and Kuhn, Joel R. and Li, Yuxuan and Long, Nicole M. and Miller, Jonathan and Paron, Madison D. and Pazdera, Jesse K. and Pedisich, Isaac and Weidemann, Christoph T.},\n date = {2023},\n doi = {10.18112/openneuro.ds004395.v2.0.0},\n publisher = {OpenNeuro},\n title = {Penn {{Electrophysiology}} of {{Encoding}} and {{Retrieval Study}} ({{PEERS}})},\n url = {https://doi.org/10.18112/openneuro.ds004395.v2.0.0}\n}"
+  },
+  {
+    "key": "rudolerDecodingOptimizingEpisodic2022a",
+    "title": "Decoding and Optimizing Episodic Memory",
+    "authors": [
+      "Joseph H. Rudoler"
+    ],
+    "collaborators": [
+      "J. P. Bruska",
+      "M. R. Dougherty",
+      "W. Chang",
+      "B. S. Katerman",
+      "D. J. Halpern",
+      "N. B. Diamond",
+      "Michael J. Kahana"
+    ],
+    "date": "2022-07-24",
+    "year": 2022,
+    "type": "Presentation",
+    "status": "",
+    "venue": "MathPsych",
+    "url": "",
+    "preprint": "",
+    "bibtex": "@poster{rudolerDecodingOptimizingEpisodic2022a,\n author = {Rudoler, Joseph H.},\n date = {2022-07-24},\n eventtitle = {{{MathPsych}}},\n namea = {Bruska, J. P. and Dougherty, M. R. and Chang, W. and Katerman, B. S. and Halpern, D. J. and Diamond, N. B. and Kahana, Michael J.},\n nameatype = {collaborator},\n title = {Decoding and Optimizing Episodic Memory},\n type = {Poster}\n}"
+  },
+  {
+    "key": "rudolerDecodingOptimizingEpisodic2022",
+    "title": "Decoding and Optimizing Episodic Memory",
+    "authors": [
+      "Joseph H. Rudoler"
+    ],
+    "collaborators": [
+      "J. P. Bruska",
+      "M. R. Dougherty",
+      "W. Chang",
+      "B. S. Katerman",
+      "D. J. Halpern",
+      "N. B. Diamond",
+      "Michael J. Kahana"
+    ],
+    "date": "2022-04-24",
+    "year": 2022,
+    "type": "Presentation",
+    "status": "",
+    "venue": "Cognitive Neuroscience Society",
+    "url": "",
+    "preprint": "",
+    "bibtex": "@poster{rudolerDecodingOptimizingEpisodic2022,\n author = {Rudoler, Joseph H.},\n date = {2022-04-24},\n eventtitle = {Cognitive {{Neuroscience Society}}},\n namea = {Bruska, J. P. and Dougherty, M. R. and Chang, W. and Katerman, B. S. and Halpern, D. J. and Diamond, N. B. and Kahana, Michael J.},\n nameatype = {collaborator},\n title = {Decoding and Optimizing Episodic Memory},\n type = {Poster}\n}"
+  },
+  {
+    "key": "rudolerOcillatoryFractalBiomarkers2022",
+    "title": "Oscillatory and Fractal Biomarkers of Human Memory",
+    "authors": [
+      "Joseph H. Rudoler"
+    ],
+    "collaborators": [
+      "Nora A. Herweg",
+      "Michael J. Kahana"
+    ],
+    "date": "2022-03-17",
+    "year": 2022,
+    "type": "Presentation",
+    "status": "",
+    "venue": "Computational and Systems Neuroscience (COSYNE)",
+    "url": "",
+    "preprint": "",
+    "bibtex": "@poster{rudolerOcillatoryFractalBiomarkers2022,\n author = {Rudoler, Joseph H.},\n date = {2022-03-17},\n eventtitle = {Computational and {{Systems Neuroscience}} ({{COSYNE}})},\n namea = {Herweg, Nora A. and Kahana, Michael J.},\n nameatype = {collaborator},\n title = {Oscillatory and Fractal Biomarkers of Human Memory},\n type = {Poster}\n}"
+  }
+]
