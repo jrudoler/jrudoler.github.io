@@ -38,6 +38,9 @@ jobs:
           set -euo pipefail
           test -s _generated-cv/RudolerCV.pdf
           test "$(head -c 5 _generated-cv/RudolerCV.pdf)" = '%PDF-'
+          # The Jekyll Docker action creates output owned by root.
+          sudo chown -R "$(id -u):$(id -g)" _site
+          mkdir -p _site/files
           install -m 644 _generated-cv/RudolerCV.pdf _site/files/RudolerCV.pdf
           cmp _generated-cv/RudolerCV.pdf _site/files/RudolerCV.pdf
       - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
