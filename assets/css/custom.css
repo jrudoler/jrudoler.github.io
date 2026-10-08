@@ -186,10 +186,18 @@ a:hover,
   color: #c3e2ff;
 }
 
-/* Keep every linked sidebar icon aligned with its link color. */
+/* Use one link color in the sidebar while preserving neutral icons. */
+.author__urls.social-icons a {
+  color: #e3e8ef !important;
+}
+
+.author__urls.social-icons a:hover {
+  color: #f1f5f9 !important;
+}
+
 .author__urls.social-icons a i,
 .author__urls.social-icons a .svg-inline--fa {
-  color: inherit;
+  color: #e3e8ef !important;
 }
 
 .page__content hr,
