@@ -6,6 +6,9 @@ rudolerEstimatingImplicitRegularization2026:
 rudolerWeightSpaceGradient2026:
   selected: true
   topics: [Deep Learning Theory]
+  links:
+    - label: Preprint PDF
+      url: /files/weight-space-activity-descent-preprint.pdf
 rudolerImprovingScalableOversight2026:
   selected: true
   topics: [AI Safety]
