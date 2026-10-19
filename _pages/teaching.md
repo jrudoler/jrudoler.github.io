@@ -28,18 +28,14 @@ The course site includes [lecture materials and assignments](https://jrudoler-te
   <figcaption>Understanding Uncertainty course website</figcaption>
 </figure>
 
-## Classroom teaching
-
-I have taught and supported courses across regression, data science, sports analytics, and data collection. A classroom photo from STAT6130:
+## Teaching at Wharton
 
 <figure class="teaching-classroom-photo">
   <img src="/images/stat6130_lecture.jpg" alt="Students attending a STAT6130 lecture">
   <figcaption>STAT6130 lecture</figcaption>
 </figure>
 
-## Teaching at Wharton
-
-I have served as a teaching assistant for:
+I have taught and supported courses across regression, data science, sports analytics, and data collection. I have served as a teaching assistant for:
 
 - STAT6130: Regression Analysis for Business (MBA)
 - STAT4730: Data Science with ChatGPT (Undergraduate/MBA)
@@ -47,6 +43,6 @@ I have served as a teaching assistant for:
 - STAT4100: Data Collection and Acquisition (Undergraduate/MBA)
 - [Moneyball Academy](https://globalyouth.wharton.upenn.edu/programs-courses/moneyball-academy/) [High School]
 
-I also hold a teaching certification from the University's Center for Excellence in Teaching, Learning, and Innovation.
+I received the 2026 Donald S. Murray Prize for Excellence in Teaching from Wharton's Statistics and Data Science Department, and I hold a teaching certificate from the University's Center for Excellence in Teaching, Learning, and Innovation (CETLI).
 
 Earlier, I tutored undergraduates in physics and data science.

@@ -222,6 +222,17 @@ a:hover,
   text-align: center;
 }
 
+.teaching-course-preview {
+  width: min(100%, 34rem);
+  margin: 1.25rem auto 2.75rem;
+}
+
+.teaching-classroom-photo {
+  float: right;
+  width: min(40%, 19rem);
+  margin: 0.25rem 0 1.25rem 2rem;
+}
+
 .about-photo {
   float: right;
   width: min(42%, 19rem);
@@ -246,11 +257,11 @@ a:hover,
 }
 
 .teaching-course-preview img {
-  max-width: 42rem;
+  max-width: 34rem;
 }
 
 .teaching-classroom-photo img {
-  max-width: 34rem;
+  max-width: 19rem;
 }
 
 .research-figure img {
@@ -268,6 +279,12 @@ figcaption {
     float: none;
     width: min(100%, 22rem);
     margin: 0 auto 1.25rem;
+  }
+
+  .teaching-classroom-photo {
+    float: none;
+    width: min(100%, 22rem);
+    margin: 1.25rem auto;
   }
 
   blockquote.epigraph {
