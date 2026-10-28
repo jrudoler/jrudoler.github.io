@@ -8,13 +8,13 @@
       "Giles Hooker"
     ],
     "collaborators": [],
-    "date": "2025-02-06",
-    "year": 2025,
+    "date": "2026-10-27",
+    "year": 2026,
     "type": "Preprint",
     "status": "Preprint",
     "venue": "arXiv",
     "url": "https://arxiv.org/abs/2502.04309",
     "preprint": "",
-    "bibtex": "@online{rudolerTargetedLearningFairness2026,\n  title = {Targeted Learning for Inference on Data Fairness},\n  author = {Rudoler, Joseph H. and Asemota, Alexander and Hooker, Giles},\n  date = {2025-02-06},\n  eprint = {2502.04309},\n  eprinttype = {arXiv},\n  doi = {10.48550/arXiv.2502.04309},\n  url = {https://arxiv.org/abs/2502.04309}\n}"
+    "bibtex": "@online{rudolerTargetedLearningFairness2026,\n  title = {Targeted Learning for Inference on Data Fairness},\n  author = {Rudoler, Joseph H. and Asemota, Alexander and Hooker, Giles},\n  date = {2026-10-27},\n  eprint = {2502.04309},\n  eprinttype = {arXiv},\n  doi = {10.48550/arXiv.2502.04309},\n  url = {https://arxiv.org/abs/2502.04309}\n}"
   }
 ]
