@@ -10,6 +10,17 @@ author_profile: true
   see <a href="{{ '/research/' | relative_url }}">my research</a>.
   You can also find me on <a href="{{ site.author.googlescholar | escape }}">Google Scholar</a>.</p>
 
+{% comment %}Public preprints awaiting inclusion in the next CV export. Generated records win.{% endcomment %}
+{% assign publications = site.data.publications %}
+{% assign publication_keys = publications | map: 'key' %}
+{% for addition in site.data.publication_additions %}
+  {% unless publication_keys contains addition.key %}
+    {% assign new_record = site.data.publication_additions | where: 'key', addition.key %}
+    {% assign publications = publications | concat: new_record %}
+  {% endunless %}
+{% endfor %}
+{% assign publications = publications | sort: 'date' | reverse %}
+
 <section class="publications" aria-label="Publication list">
   <div class="publication-controls" hidden>
     <div class="publication-views" role="group" aria-label="Publication selection">
@@ -20,7 +31,7 @@ author_profile: true
       <span>Topics</span>
       <button type="button" data-topic="" aria-pressed="true">All topics</button>
       {% assign topics = '' | split: ',' %}
-      {% for paper in site.data.publications %}
+      {% for paper in publications %}
         {% assign details = site.data.publication_details[paper.key] %}
         {% if details.topics %}{% assign topics = topics | concat: details.topics %}{% endif %}
       {% endfor %}
@@ -40,7 +51,7 @@ author_profile: true
     </div>
   </div>
   <div class="publication-list">
-  {% for paper in site.data.publications %}
+  {% for paper in publications %}
     {% assign details = site.data.publication_details[paper.key] %}
     <article class="publication" id="{{ paper.key | escape }}"
       data-selected="{% if details.selected %}true{% else %}false{% endif %}"

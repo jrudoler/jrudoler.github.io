@@ -67,3 +67,12 @@ a Clear filters button.
 The layout is inspired by Martin Saveski's Jekyll publication list,
 credited on the page. The implementation is original
 and uses the existing site's theme.
+
+## Preprints awaiting a bibliography update
+
+`_data/publication_additions.json` holds public preprints still excluded from the
+CV export as manuscripts in preparation. The publication page merges these by
+citation key, preferring generated records once available, so later CV exports
+cannot remove the public entry or create a duplicate. Remove the supplemental
+record once Zotero and a successful CV export include it. The fairness preprint
+currently uses this bridge because its Zotero export still says in preparation.
