@@ -21,7 +21,7 @@ The course site includes [lecture materials and assignments](https://jrudoler-te
 
 <figure class="teaching-course-preview">
   <a href="https://jrudoler-teaching.github.io/understanding-uncertainty/">
-    <img src="/images/uncertainty-course-screenshot.png" alt="Preview of the Understanding Uncertainty course website">
+    {% include responsive-image.html name="uncertainty-course" alt="Preview of the Understanding Uncertainty course website" sizes="(max-width: 640px) calc(100vw - 40px), 576px" %}
   </a>
   <figcaption>Understanding Uncertainty course website</figcaption>
 </figure>
@@ -29,7 +29,7 @@ The course site includes [lecture materials and assignments](https://jrudoler-te
 ## Teaching at Wharton
 
 <figure class="teaching-classroom-photo">
-  <img src="/images/stat6130_lecture.jpg" alt="Students attending a STAT6130 lecture">
+  {% include responsive-image.html name="classroom" alt="Students attending a STAT6130 lecture" sizes="(max-width: 640px) calc(100vw - 40px), 340px" %}
   <figcaption>STAT6130 lecture</figcaption>
 </figure>
 

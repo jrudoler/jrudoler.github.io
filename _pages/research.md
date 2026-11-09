@@ -30,7 +30,7 @@ We use gradients of the loss and a proposed regularizer to estimate its unknown 
 In the animation, the learned weights stay fixed while the regularization strength changes. The red curve is the empirical loss, the dashed blue curve is the regularizer, and the gray curve is their sum. At a minimum of the combined objective, the loss and regularizer gradients cancel.
 
 <figure class="research-figure">
-  <img src="/files/regularization-path.gif" alt="Animation showing empirical loss, regularization, the combined objective, and gradients at the learned weights">
+  {% include research-animation.html name="regularization" description="Empirical loss, regularization, the combined objective, and gradients at the learned weights" %}
   <figcaption>Matching loss and regularizer gradients at the learned weights.</figcaption>
 </figure>
 
@@ -76,7 +76,7 @@ Paper: [Hippocampal theta and episodic memory](https://www.jneurosci.org/content
 <!-- -->
 
 <figure class="research-figure research-figure--spectrum">
-  <img src="/files/exp_animation.gif" alt="Animation showing changes in the power-law background and oscillatory power, with log frequency on the x-axis and log power on the y-axis">
+  {% include research-animation.html name="spectrum" description="Changes in the power-law background and oscillatory power, with log frequency on the x-axis and log power on the y-axis" %}
 </figure>
 
 ## Sports analytics
@@ -86,5 +86,7 @@ You can check out our [Kaggle notebook](https://www.kaggle.com/jrudoler56/optima
 
 Our project used high-resolution player-tracking data to predict kick-return outcomes, then built a framework for finding *optimal return paths* and evaluating players' decisions.
 <figure class="research-figure">
-  <img src="/files/bdb.gif" alt="Animation from the Big Data Bowl kick-return analysis">
+  {% include research-animation.html name="kick-return" description="Player trajectories from the Big Data Bowl kick-return analysis" %}
 </figure>
+
+<script src="{{ '/assets/js/research-media.js' | relative_url }}" defer></script>

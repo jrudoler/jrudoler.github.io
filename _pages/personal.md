@@ -90,7 +90,7 @@ Here's a sampling of music I've been listening to recently, not necessarily new:
 
 I also produced an a cappella album in college: [DynamIX](https://open.spotify.com/album/1I6PeHr9GHensKAAa79PgG).
 
-<img src="/images/DynamIX_album_art.png" alt="DynamIX album artwork" width="200">
+{% include responsive-image.html name="dynamix" alt="DynamIX album artwork" sizes="200px" width=200 height=200 %}
 </section>
 </div>
 <script src="{{ '/assets/js/personal.js' | relative_url }}" defer></script>

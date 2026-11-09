@@ -1,0 +1,8 @@
+{%- assign media_animation = site.data.media.animations[include.name] -%}
+<video id="animation-{{ include.name }}" class="research-animation" width="{{ media_animation.width }}" height="{{ media_animation.height }}"
+  poster="{{ media_animation.poster | relative_url }}" preload="none" loop muted playsinline controls
+  aria-label="{{ include.description | escape }}">
+  <source src="{{ media_animation.url | relative_url }}" type="video/mp4">
+  <a href="{{ media_animation.original | relative_url }}">View the animation as a GIF</a>.
+</video>
+<button type="button" class="animation-toggle" aria-controls="animation-{{ include.name }}" hidden>Play animation</button>

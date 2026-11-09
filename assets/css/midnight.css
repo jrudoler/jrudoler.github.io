@@ -71,8 +71,10 @@ pre { background: #18202d; padding: 1rem; overflow: auto; }
 code { font-family: var(--mono); font-size: .85em; }
 .sidebar, .page__related { display: none; }
 .page__meta { font: 12px/1.6 var(--mono); color: var(--muted); }
-.research-figure img { display: block; margin: auto; max-height: 480px; object-fit: contain; }
-.research-figure--spectrum img { background: #fff; border-radius: 4px; }
+.research-figure img, .research-figure video { display: block; max-width: 100%; height: auto; margin: auto; max-height: 480px; object-fit: contain; }
+.research-figure--spectrum img, .research-figure--spectrum video { background: #fff; border-radius: 4px; }
+.animation-toggle { display: block; margin: .35rem 0 0 auto; padding: .3rem 0; border: 0; background: transparent; color: var(--muted); font: 11px/1.6 var(--mono); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.animation-toggle[hidden] { display: none; }
 .teaching-classroom-photo { float: right; width: 40%; margin: 0 0 1rem 1.5rem; }
 .teaching-course-preview { max-width: 36rem; margin: 2rem auto; }
 .news-feed table { width: 100%; border-collapse: collapse; text-align: left; }

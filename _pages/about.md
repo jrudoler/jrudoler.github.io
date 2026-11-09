@@ -5,10 +5,10 @@ permalink: /
 description: "Joey Rudoler. Statistics, deep learning, and neuroscience at Wharton."
 ---
 <main id="main" class="home" tabindex="-1">
-<a class="tetons-cover" href="{{ '/images/tetons_wall.jpg' | relative_url }}" aria-label="View the full photograph of Joey hiking in the Tetons"><img src="{{ '/images/tetons_wall.jpg' | relative_url }}" alt="Joey hiking beside a stream and rock face in the Tetons" width="1672" height="2500"></a>
+<a class="tetons-cover" href="{{ '/images/tetons_wall.jpg' | relative_url }}" aria-label="View the full photograph of Joey hiking in the Tetons">{% include responsive-image.html name="tetons" alt="Joey hiking beside a stream and rock face in the Tetons" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 914px) calc(100vw - 64px), 850px" loading="eager" priority="high" %}</a>
 <header class="bio-heading"><h1>Joey Rudoler</h1></header>
 <section class="bio" aria-label="About me" markdown="1">
-<figure class="bio-photo"><img src="{{ '/images/headshot.jpeg' | relative_url }}" alt="Joey Rudoler" width="693" height="1134"></figure>
+<figure class="bio-photo">{% include responsive-image.html name="headshot" alt="Joey Rudoler" sizes="(max-width: 640px) 115px, 165px" loading="eager" %}</figure>
 
 I'm a PhD student at The Wharton School, where I study Statistics and Data Science. My interests span deep learning theory, neuroscience, and the statistics of both.
 

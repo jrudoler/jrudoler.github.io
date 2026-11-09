@@ -1,0 +1,112 @@
+{
+  "images": {
+    "tetons": {
+      "original": "/images/tetons_wall.jpg",
+      "variants": [
+        {
+          "url": "/images/optimized/tetons-480.webp",
+          "width": 480,
+          "height": 331
+        },
+        {
+          "url": "/images/optimized/tetons-960.webp",
+          "width": 960,
+          "height": 661
+        },
+        {
+          "url": "/images/optimized/tetons-1672.webp",
+          "width": 1672,
+          "height": 1150
+        }
+      ]
+    },
+    "headshot": {
+      "original": "/images/headshot.jpeg",
+      "variants": [
+        {
+          "url": "/images/optimized/headshot-165.webp",
+          "width": 165,
+          "height": 270
+        },
+        {
+          "url": "/images/optimized/headshot-330.webp",
+          "width": 330,
+          "height": 540
+        },
+        {
+          "url": "/images/optimized/headshot-660.webp",
+          "width": 660,
+          "height": 1080
+        }
+      ]
+    },
+    "uncertainty-course": {
+      "original": "/images/uncertainty-course-screenshot.png",
+      "variants": [
+        {
+          "url": "/images/optimized/uncertainty-course-576.webp",
+          "width": 576,
+          "height": 309
+        },
+        {
+          "url": "/images/optimized/uncertainty-course-1152.webp",
+          "width": 1152,
+          "height": 618
+        }
+      ]
+    },
+    "classroom": {
+      "original": "/images/stat6130_lecture.jpg",
+      "variants": [
+        {
+          "url": "/images/optimized/classroom-340.webp",
+          "width": 340,
+          "height": 454
+        },
+        {
+          "url": "/images/optimized/classroom-680.webp",
+          "width": 680,
+          "height": 907
+        }
+      ]
+    },
+    "dynamix": {
+      "original": "/images/DynamIX_album_art.png",
+      "variants": [
+        {
+          "url": "/images/optimized/dynamix-200.webp",
+          "width": 200,
+          "height": 200
+        },
+        {
+          "url": "/images/optimized/dynamix-400.webp",
+          "width": 400,
+          "height": 400
+        }
+      ]
+    }
+  },
+  "animations": {
+    "regularization": {
+      "url": "/files/optimized/regularization.mp4",
+      "poster": "/images/optimized/regularization-poster.webp",
+      "original": "/files/regularization-path.gif",
+      "width": 1200,
+      "height": 900
+    },
+    "spectrum": {
+      "url": "/files/optimized/spectrum.mp4",
+      "poster": "/images/optimized/spectrum-poster.webp",
+      "original": "/files/exp_animation.gif",
+      "width": 900,
+      "height": 600
+    },
+    "kick-return": {
+      "url": "/files/optimized/kick-return.mp4",
+      "poster": "/images/optimized/kick-return-poster.webp",
+      "original": "/files/bdb.gif",
+      "width": 1440,
+      "height": 628
+    }
+  }
+}
