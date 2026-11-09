@@ -75,12 +75,9 @@ Paper: [Hippocampal theta and episodic memory](https://www.jneurosci.org/content
 - I investigate how a method of distinguishing pink noise in brain recordings from true brain rhythms helps us understand what patterns of brain activity actually relate to successful memory encoding and retrieval. Presented at the *Context and Episodic Memory Symposium* in August 2021 and *Computational and Systems Neuroscience (COSYNE)* in March 2022.
 <!-- -->
 
-<figure class="research-figure">
-  <img src="/files/exp_animation.gif" alt="Animation illustrating changes in model parameters">
+<figure class="research-figure research-figure--spectrum">
+  <img src="/files/exp_animation.gif" alt="Animation showing changes in the power-law background and oscillatory power, with log frequency on the x-axis and log power on the y-axis">
 </figure>
-
-### EEG pre-processing methods
-Undergraduate research project: [Optimal EEG Referencing Schemes for Brain State Classification](/files/Referencing_Report.pdf). The project compares reference schemes for EEG electrodes, explains how they act as spatial filters, and evaluates their utility for classifying brain state and memory success.
 
 ## Sports analytics
 
