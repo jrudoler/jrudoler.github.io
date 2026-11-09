@@ -6,7 +6,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-<p>Papers, preprints, presentations, and datasets. For the story behind the work,
+<p>Papers, preprints, presentations, and datasets. For more details,
   see <a href="{{ '/research/' | relative_url }}">my research</a>.
   You can also find me on <a href="{{ site.author.googlescholar | escape }}">Google Scholar</a>.</p>
 
@@ -69,10 +69,10 @@ author_profile: true
       {% if paper.venue != '' %}<p class="publication-venue">{{ paper.venue | escape }}</p>{% endif %}
       {% if details.summary %}<p>{{ details.summary | escape }}</p>{% endif %}
       <div class="publication-links">
-        {% if paper.url != '' %}<a href="{{ paper.url | escape }}">{% if paper.type == 'Dataset' %}Data{% else %}Paper{% endif %}</a>{% endif %}
+        {% if paper.url != '' %}<a href="{{ paper.url | escape }}">{% include icons/external-link.svg %} {% if paper.type == 'Dataset' %}Data{% else %}Paper{% endif %}</a>{% endif %}
         {% if paper.preprint != '' %}<a href="{{ paper.preprint | escape }}">Preprint</a>{% endif %}
         {% for link in details.links %}<a href="{{ link.url | relative_url | escape }}">{{ link.label | escape }}</a>{% endfor %}
-        <details class="publication-citation"><summary>Cite</summary><pre><code>{{ paper.bibtex | escape }}</code></pre></details>
+        <details class="publication-citation"><summary>{% include icons/quote.svg %} Cite</summary><pre><code>{{ paper.bibtex | escape }}</code></pre></details>
       </div>
     </article>
   {% endfor %}

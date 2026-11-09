@@ -2,6 +2,9 @@
 layout: archive
 classes: wide
 title: Personal
+epigraph:
+  text: "Any brain worth a nickel knows books are good for us."
+  author: "Kurt Vonnegut"
 permalink: /personal/
 author_profile: true
 redirect_from:
@@ -9,7 +12,13 @@ redirect_from:
   - /music/
 ---
 
-## Books
+<div class="personal-interests">
+<nav class="interest-tabs" aria-label="Personal interests">
+  <a id="books-tab" href="#books">Books</a>
+  <a id="music-tab" href="#music">Music</a>
+</nav>
+<section id="books" class="personal-panel" aria-labelledby="books-tab" markdown="1">
+<h2>Books</h2>
 
 A non-exhaustive list of things I've been reading since around 2020.
 
@@ -62,8 +71,9 @@ A non-exhaustive list of things I've been reading since around 2020.
 - *An Introduction to Computational Learning Theory* (Michael Kearns and Umesh Vazirani)
 - *Bayesian Data Analysis* (Andrew Gelman)
 - *Statistical Rethinking* (Richard McElreath)
-
-## Music
+</section>
+<section id="music" class="personal-panel" aria-labelledby="music-tab" markdown="1">
+<h2>Music</h2>
 
 Here's a sampling of music I've been listening to recently, not necessarily new:
 
@@ -81,3 +91,6 @@ Here's a sampling of music I've been listening to recently, not necessarily new:
 I also produced an a cappella album in college: [DynamIX](https://open.spotify.com/album/1I6PeHr9GHensKAAa79PgG).
 
 <img src="/images/DynamIX_album_art.png" alt="DynamIX album artwork" width="200">
+</section>
+</div>
+<script src="{{ '/assets/js/personal.js' | relative_url }}" defer></script>

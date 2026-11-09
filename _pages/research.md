@@ -5,21 +5,15 @@ title: Research
 toc: true
 author_profile: true
 permalink: /research/
+epigraph:
+  text: "Little strokes fell great oaks."
+  author: "Benjamin Franklin"
 ---
-> "Little strokes fell great oaks." \
-> \- Benjamin Franklin 
-{: .epigraph}
-
-My research has wandered from machine learning applications in neuroscience toward the theory and methodology of deep learning. Across both areas, I'm interested in how learning systems pick up useful patterns, and when those patterns carry over to new people, data, or tasks.
+My research has wandered from machine learning applications in neuroscience toward the theory and methodology of deep learning. My current projects also ask about fairness and AI oversight. Across these areas, I'm interested in how learning systems pick up useful patterns, and when those patterns carry over to new people, data, or tasks.
 
 See my [publication list](/publications/) for papers, preprints, presentations, and datasets, with filters by topic and type.
 
 At Penn, I worked with electroencephalography (EEG)—electrical recordings of brain activity—and used machine learning to ask whether brain signals could help predict behavior, like whether someone would remember an item. We're still a ways off from mind-reading, but it's pretty cool stuff. These days I'm interested in why deep learning works so well, where it runs into trouble, and whether a better theoretical understanding can help us build models that are more reliable and interpretable.
-
-<!-- Looking forward, I'm deeply interested in machine learning theory, methodology, and applications. There are really two main uses for data: inference (how/why something happened in the past) and prediction (what will happen in the future). We have good tools for both of these, but they rarely work together. 
-Deep learning models, for example, achieve high prediction accuracy but are often criticized for being "black box" models without interpretable parameters. Bayesian approaches explicitly model a data generating process and are therefore highly interpretable, but they require making lots of structural assumptions about probability distributions in real world data that might not be justified - this makes them biased and potentially less robust. Across the board, lots of high-perfoming models have a tendency to overfit training data and consequently fail to make robust predictions out in the wild.  -->
-
-<!-- A long-term interest of mine is developing machine learning methods that are effective tools for both *inference* and *prediction*. These methods need to be both *interpretable* and *robust* - no easy task! I hope to devote my time and attention in graduate school and beyond to studying these challenges in data science, along with applications to neuroscience and other fields.  -->
 
 ## Theory of deep learning
 
@@ -27,18 +21,40 @@ Right now I'm especially interested in how training procedures shape the solutio
 
 ### Inductive bias / implicit regularization
 
-Paper: [Estimating Implicit Regularization in Deep Learning](https://arxiv.org/abs/2605.05436)
+Paper: [Estimating Implicit Regularization in Deep Learning](https://arxiv.org/abs/2605.05436) · [Blog post](https://jrudoler.com/estimating-implicit-regularization/)
 
-One possible explanation for why neural networks generalize well is that they have some kind of inductive bias that encourages them to learn generalizing solutions (perhaps e.g. a simplicity bias that prevents overfitting). Lots of theory has been devoted to studying how our training methods (e.g. stochastic gradient descent) implicitly regularize models' effective loss landscape such a way.
+One possible explanation for why neural networks generalize well is that they have some kind of inductive bias that encourages them to learn generalizing solutions. I'm interested in using shifts away from the original loss minimum to reverse-engineer the inductive biases that training introduces.
 
-The animation shows what happens to a simple two-parameter model as we turn up $$\ell_2$$ regularization. The red surface is the original loss, the blue contours show the regularizer, and the gray surface is the combined objective. As the regularization gets stronger, the minimum moves toward the point preferred by the regularizer.
+We use gradients of the loss and a proposed regularizer to estimate its unknown parameters.
+
+In the animation, the learned weights stay fixed while the regularization strength changes. The red curve is the empirical loss, the dashed blue curve is the regularizer, and the gray curve is their sum. At a minimum of the combined objective, the loss and regularizer gradients cancel.
 
 <figure class="research-figure">
-  <img src="/files/regularization-path.gif" alt="Animation showing how regularization shifts the minimum of a two-parameter loss landscape">
-  <figcaption>As regularization increases, the minimum of the combined objective shifts.</figcaption>
+  <img src="/files/regularization-path.gif" alt="Animation showing empirical loss, regularization, the combined objective, and gradients at the learned weights">
+  <figcaption>Matching loss and regularizer gradients at the learned weights.</figcaption>
 </figure>
 
-The new solution isn't the same as the original one: regularization nudges it to a different point in parameter space. I'm interested in using shifts like this to reverse-engineer the inductive biases that training introduces.
+### Activity descent and learning rules
+
+Paper: [Weight Space Gradient Descent Induces Approximate Activity Descent, Making Learning Rules Testable](/files/weight-space-activity-descent-preprint.pdf)
+
+A central question in neuroscience is whether biological neural networks optimise a loss function by adjusting synaptic weights—and if so, by what rule. Candidate rules are difficult to test because synaptic weights cannot be measured at scale in behaving animals, whereas neural activities can be recorded across learning.
+
+We show that weight-space gradient descent induces kernel-filtered activity descent; when the kernel is approximately diagonal, each neuron follows its own loss gradient. We validate this prediction in artificial neural networks. The same relationship can and should be tested in biological neural networks with existing experimental techniques.
+
+## AI safety
+
+### Fairness in the training data
+
+Paper: [Targeted Learning for Inference on Data Fairness](https://arxiv.org/abs/2502.04309)
+
+This project uses targeted learning to quantify uncertainty in fairness properties inherited from training data. We evaluate data fairness—fairness in the data generating process used for training—and derive estimators for demographic parity, equal opportunity, and conditional mutual information.
+
+### Scalable oversight with co-trained monitors
+
+Paper: [Improving Scalable Oversight with Co-Trained Monitors](https://arxiv.org/abs/2609.36049)
+
+Training workers against fixed monitors can incentivize monitor evasion. This project studies how co-training monitors alongside workers can make AI oversight more robust to monitor evasion. We explore supervised and self-supervised approaches, with theory and code-security experiments in which a worker is trained to fool its monitor.
 
 ## EEG analysis and machine learning applications
 
