@@ -57,7 +57,7 @@
   </div>
   {% if include.more_url or include.show_more_link %}
     {% assign more_url = include.more_url | default: '/news/' %}
-    <p class="news-feed__more"><a href="{{ more_url | relative_url }}">View all announcements →</a></p>
+    <p class="news-feed__more"><a href="{{ more_url | relative_url }}">View all announcements {% include icons/arrow-right.svg %}</a></p>
   {% endif %}
   {% else %}
     {% if empty_message %}

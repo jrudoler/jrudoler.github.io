@@ -5,15 +5,13 @@ title: Teaching
 toc: true
 permalink: /teaching/
 author_profile: true
+epigraph:
+  text: "If you want to master something, teach it."
+  author: "Richard Feynman"
 ---
-
-> "If you want to master something, teach it." \
-> \- Richard Feynman
-{: .epigraph}
-
 I owe a lot to the wonderful teachers and mentors I've had over the years—not just in math. One of my English professors helped convince me to do a PhD!
 
-I really appreciate the chance to share ideas with students. Teaching is rewarding, and I usually come away understanding the material a little better myself.
+I usually come away from teaching understanding the material a little better myself.
 
 ## Course design: Understanding Uncertainty
 

@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<main id="main" class="reading-page" tabindex="-1">
+  <header class="page-heading{% if page.epigraph %} page-heading--epigraph{% endif %}">
+    <h1>{{ page.title }}</h1>
+    {% if page.epigraph %}{% include epigraph.html text=page.epigraph.text author=page.epigraph.author %}{% endif %}
+  </header>
+  <div class="page__content">{{ content }}</div>
+</main>

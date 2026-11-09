@@ -3,6 +3,9 @@
 rudolerEstimatingImplicitRegularization2026:
   selected: true
   topics: [Deep Learning Theory]
+  links:
+    - label: Blog post
+      url: https://jrudoler.com/estimating-implicit-regularization/
 rudolerWeightSpaceGradient2026:
   selected: true
   topics: [Deep Learning Theory]
@@ -13,7 +16,7 @@ rudolerImprovingScalableOversight2026:
   selected: true
   topics: [AI Safety]
 rudolerHippocampalThetaEpisodic2023:
-  selected: true
+  selected: false
   topics: [Neuroscience]
 rudolerDecodingEEGOptimizing2024:
   selected: true
@@ -36,4 +39,4 @@ rudolerWeDecodeBetter2025:
   topics: [Neuroscience, Machine Learning]
 
 rudolerTargetedLearningFairness2026:
-  topics: [Machine Learning]
+  topics: [AI Safety, Machine Learning]
