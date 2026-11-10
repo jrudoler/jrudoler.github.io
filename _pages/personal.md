@@ -24,6 +24,8 @@ A non-exhaustive list of things I've been reading since around 2020.
 
 ### Fiction
 
+- *A Man Called Ove* (Fredrik Backman)
+- *Beartown* (Fredrik Backman)
 - *Invasion from Mars: Interplanetary Stories* (selected by Orson Welles)
 - *Never Let Me Go* (Kazuo Ishiguro)
 - *The Exchange* (John Grisham)
@@ -48,6 +50,7 @@ A non-exhaustive list of things I've been reading since around 2020.
 
 ### Nonfiction
 
+- *The Irrational Decision* (Benjamin Recht)
 - *Superintelligence* (Nick Bostrom)
 - *The Worlds I See* (Fei-Fei Li)
 - *Surely You're Joking, Mr. Feynman!* (Richard Feynman)
